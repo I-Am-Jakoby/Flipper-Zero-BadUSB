@@ -16,7 +16,8 @@
 ***
 
 
-## Description 👨‍🏫
+## Description 
+👨‍🏫
 
 🥇 I am in 1st place for most payloads submitted to hack5❗ 
 
@@ -26,7 +27,8 @@
 
 ![hak 5](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/Assets/hak5-sub.png)
 
-## The Functions 🧬
+## The Functions 
+🧬
 
 | Functions                                         | Description                                                                                                                                                         |
 | :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -71,7 +73,8 @@ I am Jakoby
 </p>
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments ❗
+## Acknowledgments 
+❗
 
 * [Hak5](https://hak5.org/)
 * [Darren](https://github.com/hak5darren)
