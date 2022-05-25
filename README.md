@@ -18,11 +18,11 @@
 
 ## Description 👨‍🏫
 
-🥇 I am in 1st place for most payloads submitted to hack5! 
+🥇 I am in 1st place for most payloads submitted to hack5❗ 
 
-🔓  have taken my colllection of payloads and formatted them to work for the Flipper for all of you to use
+🔓  have taken my colllection of payloads and formatted them to work for the Flipper for all of you to use❗
 
-⚠️ Please ENJOY and use RESPONSIBLY! 
+⚠️ Please ENJOY and use RESPONSIBLY❗ 
 
 ![hak 5](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/Assets/hak5-sub.png)
 
