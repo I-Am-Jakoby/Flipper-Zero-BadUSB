@@ -1,7 +1,5 @@
 # Flipper-Zero-BadUSB 🐬
 
-![Logo](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/Assets/logo-170-px.png?raw=true)
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -15,8 +13,6 @@
 
 # Unleash the power of your Flipper 🤓💻
 
-
-
 ***
 
 
@@ -27,6 +23,8 @@
 🔓  have taken my colllection of payloads and formatted them to work for the Flipper for all of you to use
 
 ⚠️ Please ENJOY and use RESPONSIBLY! 
+
+![hak 5](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/Assets/hak5-sub.png)
 
 ## The Functions 🧬
 
