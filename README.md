@@ -4,8 +4,8 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#Description">Description</a></li>
-    <li><a href="#The-Functions 👨‍🏫">The Functions</a></li>
+    <li><a href="#Description 👨‍🏫">Description</a></li>
+    <li><a href="#The-Functions">The Functions</a></li>
     <li><a href="#Contact">Contact</a></li>
     <li><a href="#Acknowledgments">Acknowledgments</a></li>
   </ol>
