@@ -1,4 +1,4 @@
-REM     Title: OMG-PineApple
+REM     Title: PineApple
 REM
 REM     Author: I am Jakoby
 REM
