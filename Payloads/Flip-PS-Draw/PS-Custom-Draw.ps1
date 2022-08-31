@@ -194,9 +194,9 @@ echo "Hello $fullName"
 	Then the script will be paused until the mouse is moved 
 	script will check mouse position every indicated number of seconds
 	This while loop will constantly check if the mouse has been moved 
-	"CAPSLOCK" will be continously pressed to prevent screen from turning off
+	"CAPSLOCK" will be continuously pressed to prevent screen from turning off
 	it will then sleep for the indicated number of seconds and check again
-	when mouse is moved it will break out of the loop and continue theipt
+	when mouse is moved it will break out of the loop and continue the script
 #>
 
 

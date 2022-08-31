@@ -34,7 +34,7 @@ Add-Type -AssemblyName System.Windows.Forms
 
 $cycles = 3
 
-# List as many questions here as you like, it will cycke through all of them
+# List as many questions here as you like, it will cycle through all of them
 
 $msgs = @(
 "Are all scammers as dumb as you?"

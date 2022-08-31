@@ -20,7 +20,7 @@
 <#
 .NOTES
 	This script will convert an approximation of what your image should look like. Most likely you'll need to test several images to find one that works 
-	well. It is best to use images no larger than 150x150 pixels, but I would even recommend going smaller than that. My exmaple image is 25x20 pixels	
+	well. It is best to use images no larger than 150x150 pixels, but I would even recommend going smaller than that. My example image is 25x20 pixels
 	To increase the size of the pixels add more spaces to the following Write-Host command.
 	Write-Host " " -NoNewline -BackgroundColor $BackGround 
 
@@ -161,9 +161,9 @@ echo "Hello $fullName"
 	Then the script will be paused until the mouse is moved 
 	script will check mouse position every indicated number of seconds
 	This while loop will constantly check if the mouse has been moved 
-	"CAPSLOCK" will be continously pressed to prevent screen from turning off
+	"CAPSLOCK" will be continuously pressed to prevent screen from turning off
 	it will then sleep for the indicated number of seconds and check again
-	when mouse is moved it will break out of the loop and continue theipt
+	when mouse is moved it will break out of the loop and continue the script
 #>
 
 
