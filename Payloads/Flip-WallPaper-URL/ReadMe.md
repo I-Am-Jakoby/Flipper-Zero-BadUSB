@@ -20,7 +20,8 @@ This payload will download an image from any URL and set it as the targets wallp
 ## Description
 
 Use this program to troll your friends. Find any image online and grab the url and insert it into the PS1 script. 
-Run this payload and step away. Once a mouse movement is detected their wallpaper will change right in front of their eyes. 
+Run this payload and step away. Once a mouse movement is detected their wallpaper will change right in front of their eyes.
+and lastly to clean up your tracks behind you the tmp folder will be emptied and the powershell and run box history will be wiped 
 
 
 ## Getting Started
