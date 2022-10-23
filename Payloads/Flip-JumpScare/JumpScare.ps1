@@ -204,7 +204,7 @@ Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 
 #----------------------------------------------------------------------------------------------------
 
-# This script repeadedly presses the capslock button, this snippet will make sure capslock is turned back off 
+# This script repeatedly presses the capslock button, this snippet will make sure capslock is turned back off
 
 Add-Type -AssemblyName System.Windows.Forms
 $caps = [System.Windows.Forms.Control]::IsKeyLocked('CapsLock')

