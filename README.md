@@ -47,6 +47,7 @@ By accessing and using this repository, you acknowledge and agree that you do so
 | [Subscribe](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Subscribe)   | Used to make your target subscribe to your youtube channel.                                              
 | [WallPaper-Troll](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Wallpaper-Troll)   | Collects sensitive info from target, displays it as their wallpaper to taunt them.
 | [We-Found-You](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-We-Found-You)   | Open a map with your targets current location on it
+| [YT-Tripwire](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-YT-Tripwire/ReadMe.md)   | Open any youtube video after a mouse movement is detected
 
 
 <!-- CONTACT -->
