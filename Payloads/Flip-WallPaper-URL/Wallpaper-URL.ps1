@@ -1,4 +1,4 @@
-$url = "WALLPAPER URL HERE"
+$url = ""
 
 $ext = $url.split(".")[-1]
 
