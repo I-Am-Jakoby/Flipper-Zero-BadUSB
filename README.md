@@ -36,19 +36,19 @@ By accessing and using this repository, you acknowledge and agree that you do so
 ## The Functions 
 
 
-| Functions                                                                                                       | Description                                                                                       | Plug'n'Play |
-| :-------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ | :-----------|
-| [ADV-Recon](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ADV-Recon)               | A script used to do an advanced level of Recon on the targets computer.                           |✅           |      
-| [AcidBurn](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-AcidBurn)                 | A script I put together to be used on your friends as well.. or Foes. Prepare to be roasted.      |✅           | 
-| [Jump-Scare](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-JumpScare)              | Just a little jumpscare ha.                                                                       |✅           |
-| [PineApple](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-PineApple)               | Connect a targets PC to your wifi PineApple                                                       |⛔           |
-| [Play-WAV](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Play-WAV)                 | Download a WAV file and play it after a mouse movement is detected.                               |✅           |
-| [Rage-Pop-Ups](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Rage-PopUps)          | Generates an infinite loop of insulting pop-ups.                                                  |⛔           |
-| [Subscribe](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Subscribe)               | Used to make your target subscribe to your youtube channel.                                       |✅           |       
-| [WallPaper-Troll](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Wallpaper-Troll)   | Collects sensitive info from target, displays it as their wallpaper to taunt them.                |✅           |
-| [We-Found-You](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-We-Found-You)         | Open a map with your targets current location on it                                               |✅           |
-| [YT-Tripwire](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-YT-Tripwire/ReadMe.md) | Open any youtube video after a mouse movement is detected                                         |✅           |
-| [Shortcut Jacker](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ShortcutJacker)    | A script used to embed malware in the shortcut on your targets desktop                            |⛔           |
+| Functions                                                                                                       | Description                                                                                       | Plug'n'Play | Author      |
+| :-------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ | :-----------| :-----------|
+| [ADV-Recon](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ADV-Recon)               | A script used to do an advanced level of Recon on the targets computer.                           |✅           | Jakoby      |      
+| [AcidBurn](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-AcidBurn)                 | A script I put together to be used on your friends as well.. or Foes. Prepare to be roasted.      |✅           | Jakoby      | 
+| [Jump-Scare](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-JumpScare)              | Just a little jumpscare ha.                                                                       |✅           | Jakoby      |
+| [PineApple](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-PineApple)               | Connect a targets PC to your wifi PineApple                                                       |⛔           | Jakoby      |
+| [Play-WAV](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Play-WAV)                 | Download a WAV file and play it after a mouse movement is detected.                               |✅           | Jakoby      |
+| [Rage-Pop-Ups](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Rage-PopUps)          | Generates an infinite loop of insulting pop-ups.                                                  |⛔           | Jakoby      |
+| [Subscribe](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Subscribe)               | Used to make your target subscribe to your youtube channel.                                       |✅           | Jakoby      |       
+| [WallPaper-Troll](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Wallpaper-Troll)   | Collects sensitive info from target, displays it as their wallpaper to taunt them.                |✅           | Jakoby      |
+| [We-Found-You](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-We-Found-You)         | Open a map with your targets current location on it                                               |✅           | Jakoby      |
+| [YT-Tripwire](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-YT-Tripwire/ReadMe.md) | Open any youtube video after a mouse movement is detected                                         |✅           | Jakoby      |
+| [Shortcut Jacker](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ShortcutJacker)    | A script used to embed malware in the shortcut on your targets desktop                            |⛔           | Jakoby      |
 
 
 <!-- CONTACT -->
