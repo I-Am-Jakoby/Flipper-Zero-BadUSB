@@ -46,6 +46,7 @@ When your target returns and moves their mouse the video will start playing full
 * Plug in your device
 * Walk away
 * You can run the example snippet below and it will open up a video covering one of my other payloads
+* You can of course replace the URL with your own video
 ```
 powershell -w h Add-Type -AssemblyName *m.W*s.F*s;$w=[Windows.Forms.Cursor];$p=$w::Position.X;while(1){if($w::Position.X-ne$p){break}else{Sleep 3}};saps https://youtu.be/sOLIdqpzrW4;sleep 3;$o=New-Object -ComObject WScript.Shell;$o.SendKeys('f')
 ```
