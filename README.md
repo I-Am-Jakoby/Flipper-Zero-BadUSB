@@ -1,7 +1,7 @@
 # Flipper-Zero-BadUSB 🐬
 
 ***
-DISCLAIMER: This repository is for educational purposes only and is not intended for real-world usage. The creators of this repository  
+**DISCLAIMER**: This repository is for educational purposes only and is not intended for real-world usage. The creators of this repository  
 are not responsible for any harm or damage that may occur as a result of using the information or code provided in this repository.     
 By accessing and using this repository, you acknowledge and agree that you do so at your own risk.                                                                                                                            
 ***
@@ -36,18 +36,18 @@ By accessing and using this repository, you acknowledge and agree that you do so
 ## The Functions 
 
 
-| Functions                                         | Description                                                                                                                                                         |
-| :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [ADV-Recon](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ADV-Recon)     | A script used to do an advanced level of Recon on the targets computer.                                                                          |
-| [AcidBurn](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-AcidBurn)      | A script I put together to be used on your friends as well.. or Foes. Prepare to be roasted.                                                                                                           |
-| [Jump-Scare](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-JumpScare)    | Just a little jumpscare ha.                                                                                                            |
-| [PineApple](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-PineApple)   | Connect a targets PC to your wifi PineApple                                                                                                                                                 |
-| [Play-WAV](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Play-WAV)     | Download a WAV file and play it after a mouse movement is detected. 
-| [Rage-Pop-Ups](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Rage-PopUps)   | Generates an infinite loop of insulting pop-ups.                                                  
-| [Subscribe](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Subscribe)   | Used to make your target subscribe to your youtube channel.                                              
-| [WallPaper-Troll](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Wallpaper-Troll)   | Collects sensitive info from target, displays it as their wallpaper to taunt them.
-| [We-Found-You](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-We-Found-You)   | Open a map with your targets current location on it
-| [YT-Tripwire](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-YT-Tripwire/ReadMe.md)   | Open any youtube video after a mouse movement is detected
+| Functions                                                                                                       | Description                                                                                       | Plug'n'Play |
+| :-------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ | :-----------|
+| [ADV-Recon](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ADV-Recon)               | A script used to do an advanced level of Recon on the targets computer.                           |✅           |      
+| [AcidBurn](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-AcidBurn)                 | A script I put together to be used on your friends as well.. or Foes. Prepare to be roasted.      |✅           | 
+| [Jump-Scare](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-JumpScare)              | Just a little jumpscare ha.                                                                       |✅           |
+| [PineApple](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-PineApple)               | Connect a targets PC to your wifi PineApple                                                       |⛔           |
+| [Play-WAV](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Play-WAV)                 | Download a WAV file and play it after a mouse movement is detected.                               |✅           |
+| [Rage-Pop-Ups](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Rage-PopUps)          | Generates an infinite loop of insulting pop-ups.                                                  |⛔           |
+| [Subscribe](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Subscribe)               | Used to make your target subscribe to your youtube channel.                                       |✅           |       
+| [WallPaper-Troll](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Wallpaper-Troll)   | Collects sensitive info from target, displays it as their wallpaper to taunt them.                |✅           |
+| [We-Found-You](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-We-Found-You)         | Open a map with your targets current location on it                                               |✅           |
+| [YT-Tripwire](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-YT-Tripwire/ReadMe.md) | Open any youtube video after a mouse movement is detected                                         |✅           |
 
 
 <!-- CONTACT -->
@@ -93,7 +93,6 @@ By accessing and using this repository, you acknowledge and agree that you do so
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments 
-❗
 
 * [Hak5](https://hak5.org/)
 * [Darren](https://github.com/hak5darren)
