@@ -148,6 +148,7 @@ $s.Rate = -2
 $s.Speak("We found you $FN")
 $s.Speak("We know where you are")
 $s.Speak("We are everywhere")
+$s.Speak("We do not forgive, we do not forget")
 $s.Speak("Expect us")
 
 
