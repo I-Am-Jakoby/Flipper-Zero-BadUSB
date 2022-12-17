@@ -1,8 +1,8 @@
-#$url = "https://marketplace.canva.com/EAFQFfp5-zg/1/0/1600w/canva-orange-autumn-aesthetic-november-photo-desktop-wallpaper-SU_3D4rvbw8.jpg"
+#$url = "https://www.dropbox.com/s/qqf5yifmc9nc4ro/server-invite.png?dl=1"
 
-$ext = $url.split(".")[-1]
+#$ext = $url.split(".")[-1]
 
-$wp = "$Env:tmp\---wp.$ext"
+$wp = "$Env:tmp\---wp.png"
 
 iwr $url -O $wp
 
