@@ -1,4 +1,4 @@
-#$url = ""
+$url = "https://marketplace.canva.com/EAFQFfp5-zg/1/0/1600w/canva-orange-autumn-aesthetic-november-photo-desktop-wallpaper-SU_3D4rvbw8.jpg"
 
 $ext = $url.split(".")[-1]
 
