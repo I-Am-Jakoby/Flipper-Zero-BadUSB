@@ -1,6 +1,7 @@
-#$url = "https://www.dropbox.com/s/qqf5yifmc9nc4ro/server-invite.png?dl=1"
+# URL is for if you want to host your own copy of this payload
 
-#$ext = $url.split(".")[-1]
+#$url = ""
+
 
 $wp = "$Env:tmp\---wp.png"
 
