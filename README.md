@@ -53,6 +53,7 @@ By accessing and using this repository, you acknowledge and agree that you do so
 | [WallPaper-URL](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-WallPaper-URL)       | Sets the targets wallpaper to an image you provide via url after mouse movement detected          |✅           | Jakoby      |
 | [We-Found-You](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-We-Found-You)         | Open a map with your targets current location on it                                               |✅           | Jakoby      |
 | [YT-Tripwire](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-YT-Tripwire/ReadMe.md) | Open any youtube video after a mouse movement is detected                                         |✅           | Jakoby      |
+| [Credz-Plz](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Credz-Plz)               | A script used to prompt the target to enter their creds to later be exfiltrated                   |✅           | Jakoby      |
 | [Shortcut Jacker](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ShortcutJacker)    | A script used to embed malware in the shortcut on your targets desktop                            |⛔           | Jakoby      |
 
 
