@@ -81,6 +81,10 @@ I am Jakoby
 * 0.1
     * Initial Release
 
+* 0.2
+    * Added additional data queries
+    * Optimized output of data
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTACT -->
