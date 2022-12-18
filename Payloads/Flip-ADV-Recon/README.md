@@ -17,6 +17,10 @@
 
 A script used to do an advanced level of Recon on the targets computer
 
+Version 2 no longer requires you to host your own version of the script. 
+
+Modifying the execution script is the only necessary interaction
+
 ## Description
 
 This program enumerates a target PC to collect as much recon data as possible for future engagements This includes:
