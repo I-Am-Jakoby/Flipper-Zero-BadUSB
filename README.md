@@ -31,7 +31,7 @@ By accessing and using this repository, you acknowledge and agree that you do so
 
 ⚠️ Please ENJOY and use RESPONSIBLY❗ 
 
-![hak 5](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/Assets/hak5-sub.png)
+![hak 5](https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/img/hak5-banner.png)
 
 ## The Functions 
 
