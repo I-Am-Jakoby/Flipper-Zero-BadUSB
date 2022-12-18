@@ -19,12 +19,28 @@ A script used to do an advanced level of Recon on the targets computer
 
 ## Description
 
-This program enumerates a target PC to include Operating System, RAM Capacity, Public IP, and Email associated with microsoft account.
-The GeoLocation (latitude and longitude) of where the script was ran.
-The SSID and WiFi password of any current or previously connected to networks.
-It determines the last day they changed thier password and how many days ago.
-Intel on the system Info, HDDs, network interfaces, TCP connections, Processes, Services, Installed software, drivers, and video card 
-Along with TREE list of all files in the target computer is gathered and uploaded to your DropBox cloud storage
+This program enumerates a target PC to collect as much recon data as possible for future engagements This includes:
+
+* Hosts Powershell Version (to know what commands can be run)
+* Name Associated with their Microsoft Account (Or ENV UserName variable if one is not detected)
+* Whether they are in the Admin group or not
+* The email associated with their Microsoft Account (for phishing possibilities)
+* Other User accounts on their system (for possible privledge escalation)
+* Details on their login settings (Ex: Min/Max password age and length)
+* How many days since they have changed their password (Max password age - Days since = Opportunity)
+* Their GeoLocation (know their approximate where abouts)
+* Nearby Wifi Networks (Possible lateral movement)
+* Network Info (Local and Public IP Address; MAC Address; RDP Enabled?)
+* WLAN Profiles (List of SSIDs and Passwords stored on their PC)
+* Network Interfaces (What are they connecting in and out with)
+* System Information (Manufacturer, Model, Serial Number, OS, CPU, RAM, Mainboard BIOS)
+* Local Users (Accounts on system with Username, name associated with microsoft account and SID)
+* Information on their HardDrives (Indicator of Recon Scope)
+* COM and Serial Devices (Is there a device connected you can manipulate?)
+* Active TCP Connections (Poor mans Port Scanning)
+* Processes, Services, Software, and Drivers (What is running on the computer we can exploit?)
+* Video Card info (how much vroom vroom?)
+* Tree Command (Gain a more accurate assessment of what to exfil or use in Phishing attacks)
 
 ## Getting Started
 
