@@ -1,5 +1,9 @@
 # Flipper-Zero-BadUSB 🐬
 
+If you would like to support the work that I do please consider becoming a subscriber in our Discord [HERE](https://jakoby.lol/tah)
+
+The more I grow this project the more I am spending to optimize it. All support is greatly appreciated. 
+
 ***
 **DISCLAIMER**: This repository is for educational purposes only and is not intended for real-world usage. The creators of this repository  
 are not responsible for any harm or damage that may occur as a result of using the information or code provided in this repository.     
