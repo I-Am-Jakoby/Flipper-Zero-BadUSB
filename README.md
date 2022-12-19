@@ -45,6 +45,14 @@ Subscribing to my YouTube would also be really appreciated.
 
 ## The Functions 
 
+This repository has been optimized to facilitate plug and play functionality. 
+
+I purchased the domain `jakoby.lol` for the sole purpose of creating my own short URLs 
+
+I did this with the intention of making room for discord webhooks and dropbox tokens to fit in my one liners 
+
+This is turn makes it so the user no longer has to host their own version of the script.
+
 
 | Functions                                                                                                       | Description                                                                                       | Plug'n'Play | Author      |
 | :-------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ | :-----------| :-----------|
