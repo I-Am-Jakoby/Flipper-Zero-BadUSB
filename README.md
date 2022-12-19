@@ -6,6 +6,13 @@ If you would like to support the work that I do please consider becoming a subsc
 
 [SUBSCRIBE](https://jakoby.lol/tah)
 
+*CURRENT SUBSCRIBERS*
+
+<img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/Ghost-Coin.gif"/>
+<img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/DelilahCoin.gif"/>  
+<img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/cersei-Coin.gif"/>    
+<img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/matzeCoin.gif"/>
+
 The more I grow this project the more I am spending to optimize it. All support is greatly appreciated. 
 
 Subscribing to my YouTube would also be really appreciated. 
