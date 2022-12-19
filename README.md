@@ -43,8 +43,6 @@ Subscribing to my YouTube would also be really appreciated.
 
 ![hak 5](https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/img/hak5-banner.png)
 
-![jakoby](https://www.dropbox.com/s/1w98ifj9vgy6dxe/jakoby.gif?dl=1)
-
 ## The Functions 
 
 
