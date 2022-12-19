@@ -6,6 +6,9 @@ If you would like to support the work that I do please consider becoming a subsc
 
 The more I grow this project the more I am spending to optimize it. All support is greatly appreciated. 
 
+Subscribing to my YouTube would also be really appreciated. 
+
+[<img src="https://custom-icon-badges.herokuapp.com/badge/-Subscribe-red?style=for-the-badge&logo=video&logoColor=white"/>](https://youtube.com/c/IamJakoby?sub_confirmation=1)
 
 <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/img/disclaimer.png width="600" alt="C#" />
 </div>                  
