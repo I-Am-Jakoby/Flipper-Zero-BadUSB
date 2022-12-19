@@ -1,6 +1,8 @@
 # Flipper-Zero-BadUSB 🐬
 <div align=center>
-If you would like to support the work that I do please consider becoming a subscriber in our Discord [HERE](https://jakoby.lol/tah)
+If you would like to support the work that I do please consider becoming a subscriber in our Discord 
+
+[SUBSCRIBE](https://jakoby.lol/tah)
 
 The more I grow this project the more I am spending to optimize it. All support is greatly appreciated. 
 
