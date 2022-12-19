@@ -1,5 +1,7 @@
-# Flipper-Zero-BadUSB 🐬
 <div align=center>
+
+# Flipper-Zero-BadUSB 🐬
+
 If you would like to support the work that I do please consider becoming a subscriber in our Discord 
 
 [SUBSCRIBE](https://jakoby.lol/tah)
