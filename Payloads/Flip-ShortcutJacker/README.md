@@ -34,11 +34,11 @@ A script used to embed malware in the shortcut on your targets desktop
 
 ## Description
 
-This payload will run a powershell script in the background of any shortcut used on the targets desktop
+This payload will run a powershell script in the background of any shortcut used on the targets desktop.
 
-This is done by taking advantage of the ```Target``` field where powershell commands can be stored or run. 
+This is done by taking advantage of the `Target` field where powershell commands can be stored or run. 
 
-This field can store a max of 259 VISIBLE characters in that bar however after some testing I found you can store 924 characters int the ```$code``` variable and it will still run. 
+This field can store a max of 259 VISIBLE characters in that bar however after some testing I found you can store 924 characters int the `$code` variable and it will still run. 
 
 So if your command exceeds that consider using an IWR function to download and execute a longer script. 
 
@@ -54,7 +54,7 @@ Inside the .ps1 file you will find a line at the beginning with a ```$code``` va
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Using the ```Get-Shortcut``` function we will get the following information we can then use to maintain the integrity of the appearance of the shortcut after manipulating the ```Target``` field.
+Using the `Get-Shortcut` function we will get the following information we can then use to maintain the integrity of the appearance of the shortcut after manipulating the `Target` field.
 
 <img src="https://github.com/I-Am-Jakoby/hak5-submissions/raw/main/Assets/Shortcut-Jacker/shortcut.jpg" width="900">
 
