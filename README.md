@@ -36,8 +36,7 @@ Subscribing to my YouTube would also be really appreciated.
 
 # Unleash the power of your Flipper 🤓💻
 
-***
-
+***  
 
 ## Description 
 
