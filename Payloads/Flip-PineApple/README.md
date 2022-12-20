@@ -19,9 +19,9 @@ A script used to connect a targets PC to your wifi PineApple
 
 ## Description
 
-This program will generate an XML file that will be used to create a network profile for your Wifi PineApple. 
-The XML file will be manually entered into a powershell window 
-the powershell window and run box will be erased for a clean exit. 
+This program will generate an XML file that will be used to create a network profile for your Wifi PineApple.<br>
+The XML file will be manually entered into a Powershell window.<br>
+The Powershell window and run box will be erased for a clean exit. 
 
 ## Getting Started
 
