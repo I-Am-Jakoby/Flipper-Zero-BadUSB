@@ -26,11 +26,11 @@ Subscribing to my YouTube would also be really appreciated.
 
 [Description](#Description)
 
-[Description](#The-Payloads)
+[The Payloads](#The-Payloads)
 
-[Description](#Contact)
+[Contact](#Contact)
 
-[Description](#Acknowledgments)
+[Acknowledgments](#Acknowledgments)
 
 <!-- TABLE OF CONTENTS -->
 <details>
