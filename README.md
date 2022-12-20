@@ -22,7 +22,15 @@ Subscribing to my YouTube would also be really appreciated.
 <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/img/disclaimer.png width="600" alt="C#" />
 </div>                  
 
+# Table of Contents
+
 [Description](#Description)
+
+[Description](#The-Payloads)
+
+[Description](#Contact)
+
+[Description](#Acknowledgments)
 
 <!-- TABLE OF CONTENTS -->
 <details>
