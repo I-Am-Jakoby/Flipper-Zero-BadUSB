@@ -58,7 +58,7 @@ I purchased the domain `jakoby.lol` for the sole purpose of creating my own shor
 
 I did this with the intention of making room for discord webhooks and dropbox tokens to fit in my one liners 
 
-This is turn makes it so the user no longer has to host their own version of the script.
+This in turn makes it so the user no longer has to host their own version of the script.
 
 
 | Payloads                                                                                                        | Description                                                                                       | Plug'n'Play | Author      |
