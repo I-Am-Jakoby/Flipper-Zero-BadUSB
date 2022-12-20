@@ -15,15 +15,15 @@
 
 # ADV-Recon
 
-A script used to do an advanced level of Recon on the targets computer
+A script used to do an advanced level of Recon on the targets computer.
 
 Version 2 no longer requires you to host your own version of the script. 
 
-Modifying the execution script is the only necessary interaction
+Modifying the execution script is the only necessary interaction.
 
 ## Description
 
-This program enumerates a target PC to collect as much recon data as possible for future engagements This includes:
+This program enumerates a target PC to collect as much recon data as possible for future engagements. This includes:
 
 * Hosts Powershell Version (to know what commands can be run)
 * Name Associated with their Microsoft Account (Or ENV UserName variable if one is not detected)
