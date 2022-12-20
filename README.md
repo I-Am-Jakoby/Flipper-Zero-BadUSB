@@ -28,7 +28,7 @@ Subscribing to my YouTube would also be really appreciated.
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#Description">Description</a></li>
-    <li><a href="#The-Functions">The Functions</a></li>
+    <li><a href="#The-Payloads">The Payloads</a></li>
     <li><a href="#Contact">Contact</a></li>
     <li><a href="#Acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -50,7 +50,7 @@ Subscribing to my YouTube would also be really appreciated.
 
 ![hak 5](https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/img/hak5-banner.png)
 
-## The Functions 
+## The Payloads 
 
 This repository has been optimized to facilitate plug and play functionality. 
 
