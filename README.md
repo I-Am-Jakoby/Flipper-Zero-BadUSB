@@ -1,6 +1,6 @@
 <div align=center>
 
-# Flipper-Zero-BadUSB 🐬
+# 🐬 Flipper-Zero-BadUSB 🐬
 
 If you would like to support the work that I do please consider becoming a subscriber in our Discord 
 
