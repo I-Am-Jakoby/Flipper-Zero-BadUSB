@@ -19,10 +19,10 @@ A script used to download a WAV file and play it after a mouse movement is detec
 
 ## Description
 
-This program starts off by using an Invoke-WebRequest to download a WAV file<br>
-The system volume is then turned up to the max level<br>
-Then the script will be paused until a mouse movement is detected<br>
-After one is the WAV file will be played
+This program starts off by using an Invoke-WebRequest to download a WAV file. 
+The system volume is then turned up to the max level. 
+Then the script will be paused until a mouse movement is detected. 
+After one is the WAV file will be played.
 
 ## Getting Started
 
