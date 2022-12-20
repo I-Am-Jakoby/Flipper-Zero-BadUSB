@@ -19,10 +19,10 @@ A script I put together to torment Call Center Scammers but can be used on your 
 
 ## Description
 
-This script starts off using Invoke-WebRequests to download both an Image and Sound file<br> 
-Their system volume is then turned up to the max level<br>
-The script will be paused until a mouse movement is detected<br>
-At that point there desktop wallpaper will be changed to the scary image provided and the scream sound effect will be played
+This script starts off using Invoke-WebRequests to download both an Image and Sound file.
+Their system volume is then turned up to the max level.
+The script will be paused until a mouse movement is detected.
+At that point there desktop wallpaper will be changed to the scary image provided and the scream sound effect will be played.
 
 ## Getting Started
 
