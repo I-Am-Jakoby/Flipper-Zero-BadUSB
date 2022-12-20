@@ -20,9 +20,9 @@ This script is ready to run as is. Just download and execute with the provided l
 ## Description
 
 This script will get the GeoLocation (Latitude and Longitude) of your target. 
-Then a page will open in their browser with a map of their current location on it
-Their system volume will be turned to max level 
-And sapi speak with talk through their speakers the message provided or a custom one you provide 
+Then a page will open in their browser with a map of their current location on it.
+Their system volume will be turned to max level.
+SAPI speak with talk through their speakers the message provided or a custom one you provide.
 
 ![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/RubberDucky/Payloads/RD-We-Found-You/location.jpg)
 
