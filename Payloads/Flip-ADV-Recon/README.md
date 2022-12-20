@@ -17,7 +17,7 @@
 
 A script used to do an advanced level of Recon on the targets computer.
 
-Version 2 no longer requires you to host your own version of the script 
+Version 2 no longer requires you to host your own version of the script.
 
 Modifying the execution script is the only necessary interaction.
 
