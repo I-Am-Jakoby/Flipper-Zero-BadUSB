@@ -19,7 +19,7 @@ Subscribing to my YouTube would also be really appreciated.
 
 [<img src="https://custom-icon-badges.herokuapp.com/badge/-Subscribe-red?style=for-the-badge&logo=video&logoColor=white"/>](https://jakoby.lol/yno)
 
-<img src= width="600" alt="C#" />
+<img src= https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/img/disclaimer.png width="600" alt="C#" />
 </div>                 
 
 # Table of Contents
