@@ -20,7 +20,7 @@ Subscribing to my YouTube would also be really appreciated.
 [<img src="https://custom-icon-badges.herokuapp.com/badge/-Subscribe-red?style=for-the-badge&logo=video&logoColor=white"/>](https://youtube.com/c/IamJakoby?sub_confirmation=1)
 
 <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/img/disclaimer.png width="600" alt="C#" />
-</div>                  
+                 
 
 # Table of Contents
 
@@ -32,16 +32,7 @@ Subscribing to my YouTube would also be really appreciated.
 
 [Acknowledgments](#Acknowledgments)
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#Description">Description</a></li>
-    <li><a href="#The-Payloads">The Payloads</a></li>
-    <li><a href="#Contact">Contact</a></li>
-    <li><a href="#Acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
+</div> 
 
 # Unleash the power of your Flipper 🤓💻
 
