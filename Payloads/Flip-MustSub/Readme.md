@@ -27,9 +27,9 @@ A script used to get your target to subscribe to 15 of my favorite hacker youtub
 
 ## Description
 
-This script will loop through an array of urls 
+This script will loop through an array of URLs.
 
-Each URL will be passed through the subscribe function
+Each URL will be passed through the subscribe function.
 
 ## Getting Started
 
