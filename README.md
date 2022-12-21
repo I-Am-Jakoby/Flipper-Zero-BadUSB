@@ -79,7 +79,7 @@ This in turn makes it so the user no longer has to host their own version of the
 | [YT-Tripwire](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-YT-Tripwire/ReadMe.md) | Open any youtube video after a mouse movement is detected                                         |✅           | Jakoby      |
 | [Credz-Plz](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Credz-Plz)               | A script used to prompt the target to enter their creds to later be exfiltrated                   |✅           | Jakoby      |
 | [Shortcut Jacker](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ShortcutJacker)    | A script used to embed malware in the shortcut on your targets desktop                            |⛔           | Jakoby      |
-| [Wifi Grabber](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ShortcutJacker)       | Grabs your targets wifi passwords and uploads them to either Dropbox, Discord, or both            |✅           | Jakoby      |
+| [Wifi Grabber](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-WifiGrabber/README.md)| Grabs your targets wifi passwords and uploads them to either Dropbox, Discord, or both            |✅           | Jakoby      |
 
 <!-- CONTACT -->
 ## Contact
