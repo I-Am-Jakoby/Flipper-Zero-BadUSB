@@ -15,7 +15,7 @@
 
 # ADV-Recon
 
-A script used to do an advanced level of Recon on the targets computer.
+A script used to do an advanced level of Recon on the target's computer.
 
 Version 2 no longer requires you to host your own version of the script.
 
@@ -29,7 +29,7 @@ This program enumerates a target PC to collect as much recon data as possible fo
 * Name Associated with their Microsoft Account (Or ENV UserName variable if one is not detected)
 * Whether they are in the Admin group or not
 * The email associated with their Microsoft Account (for phishing possibilities)
-* Other User accounts on their system (for possible privledge escalation)
+* Other User accounts on their system (for possible privilege escalation)
 * Details on their login settings (Ex: Min/Max password age and length)
 * How many days since they have changed their password (Max password age - Days since = Opportunity)
 * Their GeoLocation (know their approximate where abouts)
