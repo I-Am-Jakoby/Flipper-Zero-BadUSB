@@ -1,0 +1,22 @@
+REM TITLE Sysmon
+REM AUTHOR Matze
+REM Version: 1.0
+REM Target: Windows
+REM DESCRIPTION: A payload used to install Sysmon with the SwiftOnSecurity rules
+
+DELAY 3000
+GUI r
+DELAY 500
+STRING powershell saps PowerShell -verb runas
+ENTER
+REM The delay below is a longer delay for admins to put in passwords if needed.
+DELAY 8000
+REM Stage 2 (Downloading files)
+STRING Invoke-WebRequest -Uri "DROPBOX LINK HERE" -OutFile "C:\sysmon.zip"
+ENTER
+DELAY 8000
+STRING Expand-Archive C:\sysmon.zip -DestinationPath "C:\Sysmon"
+ENTER
+DELAY 5000
+STRING C:\Sysmon\Sysmon.ps1 
+ENTER
