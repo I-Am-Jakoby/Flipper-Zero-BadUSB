@@ -1,1 +1,1 @@
-echo "test" > C:\.test.txt
+echo "test" > C:\test.txt
