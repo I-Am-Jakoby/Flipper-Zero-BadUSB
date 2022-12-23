@@ -2,7 +2,7 @@
 
 # 🐬 Flipper-Zero-BadUSB 🐬
 
-If you would like to support the work that I do please consider becoming a subscriber in our Discord 
+If you would like to support the work that I do, please consider becoming a subscriber in our Discord.
 
 [SUBSCRIBE](https://jakoby.lol/tah)
 
@@ -53,9 +53,9 @@ Subscribing to my YouTube would also be really appreciated.
 
 This repository has been optimized to facilitate plug and play functionality. 
 
-I purchased the domain `jakoby.lol` for the sole purpose of creating my own short URLs 
+I purchased the domain `jakoby.lol` for the sole purpose of creating my own short URLs.
 
-I did this with the intention of making room for discord webhooks and dropbox tokens to fit in my one liners 
+I did this with the intention of making room for discord webhooks and dropbox tokens to fit in my one liners.
 
 This in turn makes it so the user no longer has to host their own version of the script.
 
