@@ -15,11 +15,11 @@
 
 # Rage-PopUps
 
-A script I put together to torment Call Center Scammers but can be used on your friends as well.. or Foes.
+A script I put together to torment Call Center Scammers but can be used on your friends as well...or Foes.
 
 ## Description
 
-This program will open a series of pop up boxes with insults in a loop that repeats as many times as you set it to. 
+This program will open a series of pop-up boxes with insults in a loop that repeats as many times as you set it to. 
 There is a section in the Rage-PopUps.ps1 file where you insert your own insults or use the ones provided.
 
 ## Getting Started
