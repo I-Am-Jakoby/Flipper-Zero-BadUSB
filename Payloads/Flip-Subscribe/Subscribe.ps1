@@ -19,11 +19,11 @@
 
 <#
 .DESCRIPTION 
-	This program is designed to get your target to subscribe to your youtube channel
+	This program is designed to get your target to subscribe to your YouTube channel.
 #>
 #############################################################################################################################################
 
-# Enter your youtube channel URL here, ONLY if you are rehosting this script yourself 
+# Enter your YouTube channel URL here, ONLY if you are rehosting this script yourself 
 
 # $channel = "https://www.youtube.com/iamjakoby"
 
