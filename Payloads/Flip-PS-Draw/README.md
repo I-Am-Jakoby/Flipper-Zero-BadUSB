@@ -15,11 +15,11 @@
 
 # PS-Draw
 
-A script used to generate and draw images in the PowerShell Window, used to leave a signature or perhaps taunt victims.
+A script used to generate and draw images in the PowerShell window, used to leave a signature or perhaps taunt victims.
 
 ## Description
 
-These two programs use two different methods to draw out images in the PowerShell Window.
+These two programs use two different methods to draw out images in the PowerShell window.
 
 PS-Draw will convert an image you download into a BMP file, estimate the colors used based off the 16 available powershell colors, 
 then draw your image out in the PowerShell window. This process is not exact and needs testing of multiple images to find one that works well. 
