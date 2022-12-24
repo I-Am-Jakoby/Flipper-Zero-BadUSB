@@ -23,7 +23,7 @@
 
 # Must Sub
 
-A script used to get your target to subscribe to 15 of my favorite hacker youtube channels 
+A script used to get your target to subscribe to 15 of my favorite hacker YouTube channels. 
 
 ## Description
 
