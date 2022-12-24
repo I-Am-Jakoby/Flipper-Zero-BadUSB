@@ -1,7 +1,6 @@
 REM     Title: YouTube-TripWire
 REM     Author: I am Jakoby
-REM     Description: Plays any YouTube video after a mouse movement is detected
-REM                  Replace URL with your own
+REM     Description: Plays any YouTube video after a mouse movement is detected. (Replace URL with your own)
 REM     Target: Windows 10, 11
 GUI r
 DELAY 500
