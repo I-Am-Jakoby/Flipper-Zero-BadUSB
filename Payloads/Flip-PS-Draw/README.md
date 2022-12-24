@@ -15,7 +15,7 @@
 
 # PS-Draw
 
-A script used to generate and draw images in the Powershell Window, used to leave a signature or perhaps taunt victims.
+A script used to generate and draw images in the PowerShell Window, used to leave a signature or perhaps taunt victims.
 
 ## Description
 
