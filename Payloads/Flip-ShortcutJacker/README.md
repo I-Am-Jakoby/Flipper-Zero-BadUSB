@@ -34,7 +34,7 @@ A script used to embed malware in the shortcut on your target's desktop.
 
 ## Description
 
-This payload will run a PowerShell script in the background of any shortcut used on the targets desktop.
+This payload will run a PowerShell script in the background of any shortcut used on the target's desktop.
 
 This is done by taking advantage of the `Target` field where PowerShell commands can be stored or run. 
 
