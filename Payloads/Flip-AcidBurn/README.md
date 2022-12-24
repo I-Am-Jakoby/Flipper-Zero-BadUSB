@@ -15,7 +15,7 @@
 
 # Acid Burn
 
-A script I put together to torment Call Center Scammers but can be used on your friends as well.. or Foes.
+A script I put together to torment Call Center Scammers but can be used on your friends as well...or foes.
 
 ## Description
 
