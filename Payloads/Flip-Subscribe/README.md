@@ -15,7 +15,7 @@
 
 # Subscribe
 
-A script I put together to make your target subscribe to your youtube channel.
+A script I put together to make your target subscribe to your YouTube channel.
 
 ## Description
 
