@@ -2,7 +2,7 @@ REM     Title: Subscribe
 
 REM     Author: I am Jakoby
 
-REM     Description: This payload is meant to make your target subscribe to your youtube channel
+REM     Description: This payload is meant to make your target subscribe to your YouTube channel
 
 REM     Target: Windows 10, 11
 
