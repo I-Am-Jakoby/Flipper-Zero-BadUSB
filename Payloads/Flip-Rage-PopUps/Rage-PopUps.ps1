@@ -19,10 +19,10 @@
 
 <#
 .SYNOPSIS
-	This script will open a series of pop ups in order to taunt your target. I wrote it initially to target call center scammers
+	This script will open a series of pop-ups in order to taunt your target. I wrote it initially to target call center scammers.
 
 .DESCRIPTION 
-	This program is to taunt your target. Below are a series insults you can modify as you like. The program will generate a PopUp 
+	This program is meant to taunt your target. Below are a series insults you can modify as you like. The program will generate a Pop-up 
 	for each one of them. 
 #>
 
