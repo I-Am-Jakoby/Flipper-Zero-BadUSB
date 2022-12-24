@@ -31,7 +31,7 @@ This script will jumpscare your target.
 
 A jumpscare video will be downloaded to their temp directory. 
 
-When a mouse movement is detected, that video will be played in the powershell console at max volume and fullscreen.
+When a mouse movement is detected, that video will be played in the PowerShell console at max volume and fullscreen.
 
 ## Getting Started
 
