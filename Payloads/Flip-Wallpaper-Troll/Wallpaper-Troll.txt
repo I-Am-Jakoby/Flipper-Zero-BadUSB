@@ -2,11 +2,11 @@ REM     Title: Wallpaper-Troll
 REM
 REM     Author: I am Jakoby
 REM
-REM     Description: This payload is meant to taunt your target with a revealing wallpaper. See README.md for more details
+REM     Description: This payload is meant to taunt your target with a revealing wallpaper. See README.md for more details.
 REM
 REM     Target: Windows 10, 11
 REM
-REM     Remeber to replace the link with your link for the intended file to download if you are using a custom variant of this payload
+REM     Remeber to replace the link with your link for the intended file to download if you are using a custom variant of this payload.
 REM     Also remember to replace ?dl=0 with ?dl=1 at the end of your link so it is executed properly
 REM
 REM     --------------------------------------------------------------------------------------
