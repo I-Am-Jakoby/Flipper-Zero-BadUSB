@@ -34,7 +34,7 @@ After a mouse movement is detected, the WAV file will be played.
 
 ### Executing program
 
-* Place the WAV Url in the $wav variable
+* Place the WAV URL in the $wav variable
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download your WAV file
  
