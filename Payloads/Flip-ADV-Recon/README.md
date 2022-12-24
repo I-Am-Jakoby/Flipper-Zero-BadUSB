@@ -50,7 +50,7 @@ This program enumerates a target PC to collect as much recon data as possible fo
 
 ### Dependencies
 
-* DropBox or Discord
+* Dropbox or Discord
 * Windows 10,11
 
 <p align="right">(<a href="#top">back to top</a>)</p>
