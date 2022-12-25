@@ -23,6 +23,8 @@ Quickly with just ONE line of code you can deploy a keylogger on your targets co
 
 Complete with custom logging times, and self destruct feature
 
+Just move the `keylogger.txt` file over to your flipper and you are good to go
+
 ## Getting Started
 
 ### Dependencies
