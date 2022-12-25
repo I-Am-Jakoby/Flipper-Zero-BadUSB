@@ -79,6 +79,7 @@ while ($true) {
             while ((Get-Date -Date $t) -gt (Get-Date))
             {
               # sleeps
+	      if((get-date) -gt (Get-content "$env:appdata\-locker\killswitch.txt")){exit}
               (Get-Date -Date $t) - (Get-Date) | Start-Sleep
             }
   
