@@ -2,7 +2,7 @@ REM     Title: We-Found-You
 
 REM     Author: I am Jakoby
 
-REM     Description: This payload is meant to open a map in your targets web browser with their current location
+REM     Description: This payload is meant to open a map in your target's web browser with their current location.
 
 REM     Target: Windows 10, 11
 

@@ -19,12 +19,12 @@
                                                                                                                                                                                                                                                
 <#
 .SYNOPSIS
-	This is payload used to inject powershell code into shortcuts
+	This is payload used to inject PowerShell code into shortcuts.
 
 .DESCRIPTION 
-	This payload will gather information on the shortcuts on your targets desktop 
-  	That data will then be manipulated to embed a powershell script 
-  	This script will be ran in the background when the short cut is 
+	This payload will gather information on the shortcuts on your targets desktop.
+  	That data will then be manipulated to embed a PowerShell script.
+  	This script will be ran in the background when the short cut is. 
 
 #>
 
@@ -32,7 +32,7 @@
 
 <#
 .NOTES
-	The powershell code stored in this variable is what will run in the background
+	The PowerShell code stored in this variable is what will run in the background.
 	This field can store a max of 259 VISIBLE characters in that bar however after some testing I found you can store 924 characters int the $code 
 	variable and it will still run.
 #>  

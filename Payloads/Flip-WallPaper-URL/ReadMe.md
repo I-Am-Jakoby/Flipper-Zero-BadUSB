@@ -15,13 +15,13 @@
 
 # Wallpaper-URL
 
-This payload will download an image from any URL and set it as the targets wallpaper 
+This payload will download an image from any URL and set it as the target's wallpaper. 
 
 ## Description
 
-Use this program to troll your friends. Find any image online and grab the url and insert it into the PS1 script. 
+Use this program to troll your friends. Find any image online and grab the URL and insert it into the PS1 script. 
 Run this payload and step away. Once a mouse movement is detected, their wallpaper will change right in front of their eyes.
-Lastly, to clean up your tracks behind you, the tmp folder will be emptied and the powershell and run box history will be wiped 
+Lastly, to clean up your tracks behind you, the tmp folder will be emptied and the PowerShell and run box history will be wiped.
 
 
 ## Getting Started

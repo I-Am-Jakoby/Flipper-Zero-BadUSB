@@ -15,18 +15,18 @@
 
 # Credz-Plz
 
-A script used to prompt the target to enter their creds to later be exfiltrated with dropbox.
+A script used to prompt the target to enter their creds to later be exfiltrated with either Dropbox or a Discord webhook.
 
 ## Description
 
 A pop up box will let the target know "Unusual sign-in. Please authenticate your Microsoft Account".
 This will be followed by a fake authentication ui prompt. 
 If the target tried to "X" out, hit "CANCEL" or while the password box is empty hit "OK" the prompt will continuously re pop up.
-Once the target enters their credentials their information will be uploaded to your dropbox for collection.
+Once the target enters their credentials their information will be uploaded to your Dropbox or Discord webhook for collection.
 
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-Credz-Plz/unusual-sign-in.jpg)
+![alt text](https://i.imgur.com/mudQcIh.png)
 
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/OMG-Credz-Plz/sign-in.jpg)
+![alt text](https://i.imgur.com/3JqE7a8.png)
 
 ## Getting Started
 

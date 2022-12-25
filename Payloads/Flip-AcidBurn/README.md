@@ -15,17 +15,17 @@
 
 # Acid Burn
 
-A script I put together to torment Call Center Scammers but can be used on your friends as well.. or Foes.
+A script I put together to torment Call Center Scammers but can be used on your friends as well...or foes.
 
 ## Description
 
-This program enumerates a target PC to include Operating System, RAM Capacity, Public IP, and Email associated with microsoft account.
+This program enumerates a target PC to include Operating System, RAM Capacity, Public IP, and Email associated with the Microsoft account.
 The SSID and WiFi password of any current or previously connected to networks.
-It determines the last day they changed thier password and how many days ago.
-Once the information is gathered the script will pause until a mouse movement is detected
-Then the script uses Sapi speak to roast their set up and lack of security
-If wifi networks and passwords are detected wallpaper will be changed to image displaying that information
-Image generated will be saved to desktop, steganography is used to put hidden message at bottom of binary output of image generated
+It determines the last day they changed their password and how many days ago.
+Once the information is gathered, the script will pause until a mouse movement is detected.
+Then, the script uses Sapi speak to roast their set up and lack of security.
+If wifi networks and passwords are detected, the wallpaper will be changed to an image displaying that information.
+The generated image will be saved to the desktop and steganography is used to put a hidden message at the bottom of the binary output of the generated image.
 
 ## Getting Started
 

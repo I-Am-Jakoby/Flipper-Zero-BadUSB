@@ -22,9 +22,9 @@
 
 ## Description
 
-This payload can be used to retrieve the browsing history and bookmarks from edge, chrome, and firefox (no bookmarks from firefox currently)
+This payload can be used to retrieve the browsing history and bookmarks from Edge, Chrome, Opera GX, and Firefox (no bookmarks from firefox currently).
 
-They are then exfiled using either discord or dropbox
+They are then exfiled using either Discord or Dropbox.
 
 ## The Function
 

@@ -15,11 +15,11 @@
 
 # Subscribe
 
-A script I put together to make your target subscribe to your youtube channel
+A script I put together to make your target subscribe to your YouTube channel.
 
 ## Description
 
-This script is set to open your youtube account in their browser where they will be prompted to subscribe to you. 
+This script is set to open your YouTube account in their browser where they will be prompted to subscribe to you. 
 SPOILER: They do.
 
 ## Getting Started
@@ -27,7 +27,7 @@ SPOILER: They do.
 ### Dependencies
 
 * Windows 10,11
-* Your target will have to be signed into their youtube account
+* Your target will have to be signed into their YouTube account
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

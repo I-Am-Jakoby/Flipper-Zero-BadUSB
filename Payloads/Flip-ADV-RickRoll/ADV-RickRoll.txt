@@ -2,8 +2,8 @@ REM     Title: ADV-RickRoll
 
 REM    Author: I am Jakoby
 
-REM    Description: This is a one liner payload that will Rick Roll your target. Video will be played a full screen and max volume. 
-REM     Upon deployment payload will pause until a mouse movement is detected and run once one is. 
+REM    Description: This is a one liner payload that will Rick Roll your target. Video will be played at full screen and max volume. 
+REM    Upon deployment, payload will pause until a mouse movement is detected and run once one is. 
 
 REM    Target: Windows 10, 11
 

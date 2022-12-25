@@ -15,14 +15,14 @@
 
 # Play-WAV
 
-A script used to download a WAV file and play it after a mouse movement is detected
+A script used to download a WAV file and play it after a mouse movement is detected.
 
 ## Description
 
 This program starts off by using an Invoke-WebRequest to download a WAV file. 
 The system volume is then turned up to the max level. 
 Then the script will be paused until a mouse movement is detected. 
-After one is the WAV file will be played.
+After a mouse movement is detected, the WAV file will be played.
 
 ## Getting Started
 
@@ -34,7 +34,7 @@ After one is the WAV file will be played.
 
 ### Executing program
 
-* Place the WAV Url in the $wav variable
+* Place the WAV URL in the $wav variable
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download your WAV file
  

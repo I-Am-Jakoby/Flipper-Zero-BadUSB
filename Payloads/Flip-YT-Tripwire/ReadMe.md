@@ -23,14 +23,14 @@
 
 # YouTube Tripwire
 
-Plays any YouTube video after a mouse movement is detected
+Plays any YouTube video after a mouse movement is detected.
 
 ## Description
 
 This script is a one liner that can fit in the runbox by itself.
-Just replace the URL for the Youtube video and run it.
+Just replace the URL for the YouTube video and run it.
 You can now unplug your device and walk away.
-When your target returns and moves their mouse the video will start playing full screen.
+When your target returns and moves their mouse, the video will start playing full screen.
 
 ## Getting Started
 

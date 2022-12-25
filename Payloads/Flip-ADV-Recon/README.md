@@ -15,7 +15,7 @@
 
 # ADV-Recon
 
-A script used to do an advanced level of Recon on the targets computer.
+A script used to do an advanced level of recon on the target's computer.
 
 Version 2 no longer requires you to host your own version of the script.
 
@@ -25,11 +25,11 @@ Modifying the execution script is the only necessary interaction.
 
 This program enumerates a target PC to collect as much recon data as possible for future engagements. This includes:
 
-* Hosts Powershell Version (to know what commands can be run)
-* Name Associated with their Microsoft Account (Or ENV UserName variable if one is not detected)
+* Hosts PowerShell Version (to know what commands can be run)
+* Name associated with their Microsoft account (Or ENV UserName variable if one is not detected)
 * Whether they are in the Admin group or not
-* The email associated with their Microsoft Account (for phishing possibilities)
-* Other User accounts on their system (for possible privledge escalation)
+* The email associated with their Microsoft account (for phishing possibilities)
+* Other User accounts on their system (for possible privilege escalation)
 * Details on their login settings (Ex: Min/Max password age and length)
 * How many days since they have changed their password (Max password age - Days since = Opportunity)
 * Their GeoLocation (know their approximate where abouts)
@@ -39,7 +39,7 @@ This program enumerates a target PC to collect as much recon data as possible fo
 * Network Interfaces (What are they connecting in and out with)
 * System Information (Manufacturer, Model, Serial Number, OS, CPU, RAM, Mainboard BIOS)
 * Local Users (Accounts on system with Username, name associated with microsoft account and SID)
-* Information on their HardDrives (Indicator of Recon Scope)
+* Information on their hard drives (Indicator of Recon Scope)
 * COM and Serial Devices (Is there a device connected you can manipulate?)
 * Active TCP Connections (Poor mans Port Scanning)
 * Processes, Services, Software, and Drivers (What is running on the computer we can exploit?)
@@ -50,7 +50,7 @@ This program enumerates a target PC to collect as much recon data as possible fo
 
 ### Dependencies
 
-* DropBox or Discord
+* Dropbox or Discord
 * Windows 10,11
 
 <p align="right">(<a href="#top">back to top</a>)</p>

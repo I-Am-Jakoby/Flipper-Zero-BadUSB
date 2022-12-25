@@ -23,7 +23,7 @@
 
 # ADV-RickRoll
 
-A script used to do an advanced rick roll on your target
+A script used to do an advanced rick roll on your target.
 
 ## Description
 

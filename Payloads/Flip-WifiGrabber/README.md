@@ -17,7 +17,7 @@
 
 ## Description
 
-This payload grabs your targets wifi passwords and uploads them to either Dropbox, Discord, or both
+This payload grabs your target's wifi passwords and uploads them to either Dropbox, Discord, or both.
 
 ## Getting Started
 
@@ -30,9 +30,9 @@ This payload grabs your targets wifi passwords and uploads them to either Dropbo
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
 
-`$dc` is the variable that stores your discord webhook 
+`$dc` is the variable that stores your Discord webhook 
 
-`$db` is the variable that stores your dropbox token 
+`$db` is the variable that stores your Dropbox token 
 
 Fill in either or both of these to methods to exfil your collected data
 
