@@ -81,6 +81,7 @@ This in turn makes it so the user no longer has to host their own version of the
 | [Shortcut Jacker](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ShortcutJacker)    | A script used to embed malware in the shortcut on your targets desktop                            |⛔           | Jakoby      |
 | [Wifi Grabber](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-WifiGrabber/README.md)| Grabs your targets wifi passwords and uploads them to either Dropbox, Discord, or both            |✅           | Jakoby      |
 | [Browser Data](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-BrowserData/README.md)| This payload can be used to retrieve the browsing history and bookmarks of your target            |✅           | Jakoby      |
+| [KeyLogger](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Keylogger)               | This is a Powershell based keylogger that exfiltrates the logs to discord                         |✅           | Jakoby      |
 
 <!-- CONTACT -->
 ## Contact
