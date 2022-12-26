@@ -85,7 +85,7 @@ while ($true) {
               # sleeps
 	      $Lctrl = [Windows.Input.Keyboard]::IsKeyDown([System.Windows.Input.Key]::'LeftCtrl')
               $Rctrl = [Windows.Input.Keyboard]::IsKeyDown([System.Windows.Input.Key]::'RightCtrl')
-	      if((get-date) -gt (Get-content "$env:appdata\-locker\killswitch.txt" -or $Rctrl -and $Lctrl)){exit}
+	      if((Get-Content "$env:appdata\-locker\killswitch.txt") -ne $null -and ((get-date) -gt (Get-content "$env:appdata\-locker\killswitch.txt")) -or ($Rctrl -and $Lctrl)){exit}
               (Get-Date -Date $t) - (Get-Date) | Start-Sleep
             }
   
