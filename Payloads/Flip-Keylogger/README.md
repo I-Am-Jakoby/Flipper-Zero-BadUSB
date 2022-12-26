@@ -13,7 +13,7 @@
   </ol>
 </details>
 
-# Keylogger (UNDER MAINTENANCE)
+# Keylogger 
 
 This is a Powershell based keylogger that exfiltrates the logs to discord
 
