@@ -15,7 +15,7 @@
 
 # Keylogger (CURRENTLY DETECTED - UPDATING ASAP)
 
-This is a Powershell based keylogger that exfiltrates the logs to discord
+This is a Powershell based keylogger that exfiltrates the logs to discord webhook
 
 ## Description
 
