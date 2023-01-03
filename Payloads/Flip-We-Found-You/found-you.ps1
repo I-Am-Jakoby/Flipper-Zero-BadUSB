@@ -125,13 +125,9 @@ $GL = Get-GeoLocation
 
 $GL = $GL -split " "
 
-#$Lat = $GL[0].Substring(11) -replace ".$"
+$Lat = $GL[0].Substring(11) -replace ".$"
 
-#$Lon = $GL[1].Substring(10) -replace ".$"
-
-$Lat = 37
-
-$Lon = -122
+$Lon = $GL[1].Substring(10) -replace ".$"
 
 Pause-Script
 
