@@ -62,7 +62,6 @@ This in turn makes it so the user no longer has to host their own version of the
 
 | Payloads                                                                                                        | Description                                                                                       | Plug'n'Play | Author      |
 | :-------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ | :-----------| :-----------|
-| [Hacker-Goose](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-HackerGoose)          | A payload that hires a goose to hack your target in real time                                     |✅           | Jakoby      |      
 | [ADV-Recon](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ADV-Recon)               | A script used to do an advanced level of Recon on the targets computer.                           |✅           | Jakoby      |      
 | [AcidBurn](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-AcidBurn)                 | A script I put together to be used on your friends as well.. or Foes. Prepare to be roasted       |✅           | Jakoby      | 
 | [Jump-Scare](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-JumpScare)              | Just a little jumpscare that changes the targets wallpaper                                        |✅           | Jakoby      |
