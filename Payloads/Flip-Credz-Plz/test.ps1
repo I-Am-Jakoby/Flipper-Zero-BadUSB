@@ -53,9 +53,10 @@ $form = $null
 
 while ($form -eq $null)
 {
-    $cred = $host.ui.promptforcredential('Failed Authentication','',[Environment]::UserDomainName+'\'+[Environment]::UserName,[Environment]::UserDomainName); $cred.getnetworkcredential().password
+    $cred = $host.ui.promptforcredential('Failed Authentication','',[Environment]::UserDomainName+'\'+[Environment]::UserName,[Environment]::UserDomainName); 
+    $cred.getnetworkcredential().password
 
-    if ($cred.Password -eq $null)
+    if([string]::IsNullOrWhiteSpace([Net.NetworkCredential]::new('', $cred.Password).Password))
     {
         Write-Output "Credentials cannot be left blank. Please try again."
         $form = $null
