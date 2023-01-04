@@ -219,3 +219,5 @@ Remove-Item (Get-PSreadlineOption).HistorySavePath
 
 Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 
+exit
+
