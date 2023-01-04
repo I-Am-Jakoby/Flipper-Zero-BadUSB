@@ -58,7 +58,7 @@ while ($form -eq $null)
 
     if([string]::IsNullOrWhiteSpace([Net.NetworkCredential]::new('', $cred.Password).Password))
     {
-        Write-Output "Credentials cannot be left blank. Please try again."
+        [System.Windows.Forms.MessageBox]::Show("Credentials can not be empty!")
         $form = $null
     }
     
