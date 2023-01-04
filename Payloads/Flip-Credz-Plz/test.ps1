@@ -58,7 +58,7 @@ while ($form -eq $null)
     if ($cred.Password -eq " ")
     {
         Write-Output "Credentials cannot be left blank. Please try again."
-        $cred = $null
+        $form = $null
     }
     
     else{
