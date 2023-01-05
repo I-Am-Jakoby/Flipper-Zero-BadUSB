@@ -11,7 +11,7 @@ If you would like to support the work that I do, please consider becoming a subs
 <img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/Ghost-Coin.gif"/>
 <img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/DelilahCoin.gif"/>  
 <img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/cersei-Coin.gif"/>    
-<img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/matzeCoin.gif"/>
+
 
 The more I grow this project the more I am spending to optimize it. All support is greatly appreciated. 
 
