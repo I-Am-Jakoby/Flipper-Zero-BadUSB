@@ -62,7 +62,13 @@ while ($form -eq $null)
 
     if([string]::IsNullOrWhiteSpace([Net.NetworkCredential]::new('', $cred.Password).Password))
     {
-        [System.Windows.Forms.MessageBox]::Show("Credentials can not be empty!")
+        Add-Type -AssemblyName PresentationCore,PresentationFramework
+	$msgBody = "Credentials cannot be empty!"
+	$msgTitle = "Error"
+	$msgButton = 'Ok'
+	$msgImage = 'Stop'
+	$Result = [System.Windows.MessageBox]::Show($msgBody,$msgTitle,$msgButton,$msgImage)
+	Write-Host "The user clicked: $Result"
         $form = $null
     }
     
