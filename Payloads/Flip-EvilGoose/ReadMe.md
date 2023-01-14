@@ -13,7 +13,7 @@
   </ol>
 </details>
 
-# Hacker Goose
+# Evil Goose
 
 A payload that hires a goose to hack your target in real time
 
