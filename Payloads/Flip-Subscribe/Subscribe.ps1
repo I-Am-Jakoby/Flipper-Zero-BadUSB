@@ -30,7 +30,7 @@
 Add-Type -AssemblyName System.Windows.Forms
 $o=New-Object -ComObject WScript.Shell
 $url = -join($channel,"?sub_confirmation=1")
-Start-Process $url 
+Start-Process "$url" 
 Start-Sleep -Seconds 3
 [System.Windows.Forms.SendKeys]::SendWait('{TAB}'*2)
 [System.Windows.Forms.SendKeys]::SendWait('{ENTER}')
