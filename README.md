@@ -76,6 +76,7 @@ This in turn makes it so the user no longer has to host their own version of the
 | [Wifi Grabber](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-WifiGrabber/README.md)| Grabs your targets wifi passwords and uploads them to either Dropbox, Discord, or both            |✅           | Jakoby      |
 | [IP Grabber](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-IP-Grabber)             | Grabs your targets IP addresses and uploads them to either Dropbox, Discord, or both              |✅           | Jakoby      |
 | [Browser Data](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-BrowserData/README.md)| This payload can be used to retrieve the browsing history and bookmarks of your target            |✅           | Jakoby      |
+| [VoiceLogger](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/VoiceLogger)                | Activates your targets microphone and converts their speech to text and exfils it to discord      |✅           | Jakoby      |
 
 <!-- CONTACT -->
 ## Contact
