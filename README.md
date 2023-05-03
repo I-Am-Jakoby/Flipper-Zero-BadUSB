@@ -55,6 +55,7 @@ This in turn makes it so the user no longer has to host their own version of the
 
 | Payloads                                                                                                        | Description                                                                                       | Plug'n'Play | Author      |
 | :-------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ | :-----------| :-----------|
+| [VoiceLogger](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/VoiceLogger)                | Activates your targets microphone and converts their speech to text and exfils it to discord      |✅           | Jakoby      |
 | [Evil-Goose](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-EvilGoose)              | A payload that hires a goose to hack your target in real time                                     |✅           | Jakoby      |      
 | [ADV-Recon](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ADV-Recon)               | A script used to do an advanced level of Recon on the targets computer.                           |✅           | Jakoby      |      
 | [AcidBurn](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-AcidBurn)                 | A script I put together to be used on your friends as well.. or Foes. Prepare to be roasted       |✅           | Jakoby      | 
@@ -76,7 +77,6 @@ This in turn makes it so the user no longer has to host their own version of the
 | [Wifi Grabber](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-WifiGrabber/README.md)| Grabs your targets wifi passwords and uploads them to either Dropbox, Discord, or both            |✅           | Jakoby      |
 | [IP Grabber](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-IP-Grabber)             | Grabs your targets IP addresses and uploads them to either Dropbox, Discord, or both              |✅           | Jakoby      |
 | [Browser Data](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-BrowserData/README.md)| This payload can be used to retrieve the browsing history and bookmarks of your target            |✅           | Jakoby      |
-| [VoiceLogger](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/VoiceLogger)                | Activates your targets microphone and converts their speech to text and exfils it to discord      |✅           | Jakoby      |
 
 <!-- CONTACT -->
 ## Contact
