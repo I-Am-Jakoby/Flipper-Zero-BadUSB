@@ -17,8 +17,8 @@
 
 ## Description
 
-This payload activates your targets microphone and converts their speech to text and exfils it to discord 
-With the optional functionality of incorporating voice activated payloads
+This payload activates your target's microphone, converts their speech to text, and exfils it to Discord 
+with the optional functionality of incorporating voice activated payloads.
 
 ## Getting Started
 
@@ -82,7 +82,7 @@ function voiceLogger {
 
 ## Contributing
 
-All contributors names will be listed here
+All contributor's names will be listed here
 
 I am Jakoby
 
