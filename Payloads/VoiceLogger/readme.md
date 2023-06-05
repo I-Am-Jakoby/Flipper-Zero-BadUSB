@@ -78,6 +78,22 @@ function voiceLogger {
 }
 ```
 
+```mermaid
+graph TB;
+  A[Start voiceLogger] --> B[Start Listening]
+  B --> C{Recognized text?}
+  C -->|Yes| D[Write to console]
+  D --> E[Save to file]
+  E --> F[Send to Discord]
+  F --> G{Keyword recognized?}
+  G -->|'note'| H[Open Notepad]
+  G -->|'exit'| I[Exit function]
+  G -->|No keyword| B
+  C -->|No| B
+  I --> J[Clear Log]
+  J --> K[End voiceLogger]
+```
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributing
