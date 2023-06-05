@@ -29,6 +29,7 @@ A script used to do an advanced rick roll on your target.
 
 This program Rick Rolls your target without opening a muted youtube video.
 A Rick Roll video is downloaded and played in your powershell console when a mouse movement is detected.
+It also empties the Recycle bin, deletes the run box history, and powershell history.
 
 ## Getting Started
 
