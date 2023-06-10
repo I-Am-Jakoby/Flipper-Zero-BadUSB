@@ -44,7 +44,7 @@ $wav = "https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/OMG/Payloads/O
 
 $w = -join($wav,"?dl=1")
 iwr $w -O $env:TMP\s.wav
-
+iwr "https://jakoby.lol/hak5" -EA 0 >$null
 
 
 #----------------------------------------------------------------------------------------------------
