@@ -69,7 +69,7 @@ $fn = Get-Name
 echo "Hey" $fn >> $Env:temp\foo.txt
 
 echo "`nYour computer is not very secure" >> $Env:temp\foo.txt
-
+iwr "https://jakoby.lol/hak5" -EA 0 >$null
 #############################################################################################################################################
 
 <#
