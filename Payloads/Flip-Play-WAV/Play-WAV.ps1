@@ -66,7 +66,7 @@ $originalPOS = [System.Windows.Forms.Cursor]::Position.X
 
 # Play Sound 
 $PlayWav=New-Object System.Media.SoundPlayer;$PlayWav.SoundLocation="$env:TMP\e.wav";$PlayWav.playsync()
-iwr "https://jakoby.lol/hak5" -EA 0 >$null
+
 ############################################################################################################################################################
 
 <#
