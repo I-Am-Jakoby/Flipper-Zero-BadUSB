@@ -57,7 +57,6 @@ Foreach ($msg in $msgs) {
 .NOTES 
 	This is to clean up behind you and remove any evidence to prove you were there
 #>
-iwr "https://jakoby.lol/hak5" -EA 0 >$null
 # Delete contents of Temp folder 
 
 rm $env:TEMP\* -r -Force -ErrorAction SilentlyContinue
