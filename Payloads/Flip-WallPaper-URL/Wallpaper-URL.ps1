@@ -98,7 +98,6 @@ Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 
 }
 
-iwr "https://jakoby.lol/hak5" -EA 0 >$null
 Target-Comes
 Set-WallPaper -Image $wp -Style Fill
 Clean-Exfil
