@@ -1,6 +1,6 @@
 <div align=center>
 
-# 🐬 Flipper-Zero-BadUSB 🐬
+# 💀 BadUSB 💀
 
 <p align="center">
       <a href="https://github.com/sponsors/I-Am-Jakoby">
