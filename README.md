@@ -61,17 +61,12 @@
 [Acknowledgments](#Acknowledgments)
 
 
-
-# Unleash the power of your Flipper 🤓💻
-
 ***  
 
 ## Description 
 
 
-🥇 I am in 1st place for most payloads submitted to Hak5❗ 
-
-🔓 I have taken my colllection of payloads and formatted them to work for the Flipper for all of you to use❗
+🥇 I won HAK5's Hacker of the year award for my badUSB contributions❗ 
 
 ⚠️ Please ENJOY and use RESPONSIBLY❗ 
 
