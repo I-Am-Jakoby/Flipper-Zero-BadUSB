@@ -2,15 +2,50 @@
 
 # 💀 BadUSB 💀
 
+<!-- CONTACT -->
+<h2 align="center">📱 My Socials 📱</h2>
+<div align=center>
+<table>
+  <tr>
+    <td align="center" width="96">
+      <a href="https://youtube.com/c/IamJakoby?sub_confirmation=1">
+        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/blob/main/img/youtube-svgrepo-com.svg width="48" height="48" alt="C#" />
+      </a>
+      <br>YouTube
+    </td>
+    <td align="center" width="96">
+      <a href="https://twitter.com/I_Am_Jakoby">
+        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/blob/main/img/twitter.png width="48" height="48" alt="Python" />
+      </a>
+      <br>Twitter
+    </td>
+    <td align="center" width="96">
+      <a href="https://www.instagram.com/i_am_jakoby/">
+        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/blob/main/img/insta.png width="48" height="48" alt="Golang" />
+      </a>
+      <br>Instagram
+    </td>
+    <td align="center" width="96">
+      <a href="https://discord.gg/MYYER2ZcJF">
+        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/blob/main/img/discord-v2-svgrepo-com.svg width="48" height="48" alt="Jsonnet" />
+      </a>
+      <br>Discord
+    </td>
+    <td align="center" width="96">
+      <a href="https://www.tiktok.com/@i_am_jakoby?lang=en">
+        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/img/tiktok.svg width="48" height="48" alt="Jsonnet" />
+      </a>
+      <br>TikTok
+    </td>    
+  </tr>
+</table>
+</div>
+
 <p align="center">
       <a href="https://github.com/sponsors/I-Am-Jakoby">
         <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/blob/main/img/Discord-Sponsor.png width="125" alt="Python" />
       </a>	
 </p>
-
-Subscribing to my YouTube would also be greatly appreciated. 
-
-[<img src="https://custom-icon-badges.herokuapp.com/badge/-Subscribe-red?style=for-the-badge&logo=video&logoColor=white"/>](https://jakoby.lol/yno)
 
 <img src= https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/img/disclaimer.png width="600" alt="C#" />
 </div>                 
@@ -78,46 +113,7 @@ This, in turn, makes it so the user no longer needs to host their own version of
 | [IP Grabber](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-IP-Grabber)             | Grabs your target's IP addresses and uploads them to either Dropbox, Discord, or both.              |✅           | Jakoby      |
 | [Browser Data](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-BrowserData)| This payload can be used to retrieve the browsing history and bookmarks of your target.            |✅           | Jakoby      |
 
-<!-- CONTACT -->
-## Contact
 
-<h2 align="center">📱 My Socials 📱</h2>
-<div align=center>
-<table>
-  <tr>
-    <td align="center" width="96">
-      <a href="https://youtube.com/c/IamJakoby?sub_confirmation=1">
-        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/blob/main/img/youtube-svgrepo-com.svg width="48" height="48" alt="C#" />
-      </a>
-      <br>YouTube
-    </td>
-    <td align="center" width="96">
-      <a href="https://twitter.com/I_Am_Jakoby">
-        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/blob/main/img/twitter.png width="48" height="48" alt="Python" />
-      </a>
-      <br>Twitter
-    </td>
-    <td align="center" width="96">
-      <a href="https://www.instagram.com/i_am_jakoby/">
-        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/blob/main/img/insta.png width="48" height="48" alt="Golang" />
-      </a>
-      <br>Instagram
-    </td>
-    <td align="center" width="96">
-      <a href="https://discord.gg/MYYER2ZcJF">
-        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/blob/main/img/discord-v2-svgrepo-com.svg width="48" height="48" alt="Jsonnet" />
-      </a>
-      <br>Discord
-    </td>
-    <td align="center" width="96">
-      <a href="https://www.tiktok.com/@i_am_jakoby?lang=en">
-        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/img/tiktok.svg width="48" height="48" alt="Jsonnet" />
-      </a>
-      <br>TikTok
-    </td>    
-  </tr>
-</table>
-</div>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments 
