@@ -77,6 +77,7 @@ This, in turn, makes it so the user no longer needs to host their own version of
 | [Wifi Grabber](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-WifiGrabber)| Grabs your target's WiFi passwords and uploads them to either Dropbox, Discord, or both.            |✅           | Jakoby      |
 | [IP Grabber](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-IP-Grabber)             | Grabs your target's IP addresses and uploads them to either Dropbox, Discord, or both.              |✅           | Jakoby      |
 | [Browser Data](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-BrowserData)| This payload can be used to retrieve the browsing history and bookmarks of your target.            |✅           | Jakoby      |
+| [CryptoLocker](https://github.com/ooovenenoso/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-CryptoLocker) | A script designed for educational purposes to encrypt files on a target machine. |✅ | ooovenenoso |
 
 <!-- CONTACT -->
 ## Contact

